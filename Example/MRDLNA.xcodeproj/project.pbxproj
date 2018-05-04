@@ -23,6 +23,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		8439C2CC209C38FD001125BC /* DLNAControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2C7209C38FD001125BC /* DLNAControlVC.xib */; };
+		8439C2CD209C38FD001125BC /* DLNAControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2C8209C38FD001125BC /* DLNAControlVC.m */; };
+		8439C2CE209C38FD001125BC /* DLNASearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2C9209C38FD001125BC /* DLNASearchVC.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +43,7 @@
 		270D84EDD3A5655487B1AAA3 /* Pods_MRDLNA_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRDLNA_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428DBE8FD792AA40C92E9872 /* Pods-MRDLNA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRDLNA_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		472C15D1850376CB9657DAAF /* Pods-MRDLNA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRDLNA_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4E80303D372680F5E26BAD78 /* MRDLNA.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MRDLNA.podspec; path = ../MRDLNA.podspec; sourceTree = "<group>"; };
+		4E80303D372680F5E26BAD78 /* MRDLNA.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MRDLNA.podspec; path = ../MRDLNA.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* MRDLNA_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRDLNA_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,9 +64,14 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8439C2C7209C38FD001125BC /* DLNAControlVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLNAControlVC.xib; sourceTree = "<group>"; };
+		8439C2C8209C38FD001125BC /* DLNAControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAControlVC.m; sourceTree = "<group>"; };
+		8439C2C9209C38FD001125BC /* DLNASearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNASearchVC.m; sourceTree = "<group>"; };
+		8439C2CA209C38FD001125BC /* DLNAControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAControlVC.h; sourceTree = "<group>"; };
+		8439C2CB209C38FD001125BC /* DLNASearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNASearchVC.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9061423E3DCC8FC837453ACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9652E32BFD79ED1B12D6FF98 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9061423E3DCC8FC837453ACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9652E32BFD79ED1B12D6FF98 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D7C58695D61B78E46798DEA4 /* Pods-MRDLNA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRDLNA_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1CB6A307D1E45F66214FCC2 /* Pods-MRDLNA_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRDLNA_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF659AF0E67B9537D05DB807 /* Pods_MRDLNA_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRDLNA_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +156,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MRViewController.h */,
 				6003F5A6195388D20070C39A /* MRViewController.m */,
+				8439C2C6209C38FD001125BC /* DLNA_Play */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -194,6 +203,18 @@
 				9061423E3DCC8FC837453ACD /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		8439C2C6209C38FD001125BC /* DLNA_Play */ = {
+			isa = PBXGroup;
+			children = (
+				8439C2CA209C38FD001125BC /* DLNAControlVC.h */,
+				8439C2C8209C38FD001125BC /* DLNAControlVC.m */,
+				8439C2C7209C38FD001125BC /* DLNAControlVC.xib */,
+				8439C2CB209C38FD001125BC /* DLNASearchVC.h */,
+				8439C2C9209C38FD001125BC /* DLNASearchVC.m */,
+			);
+			path = DLNA_Play;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8439C2CC209C38FD001125BC /* DLNAControlVC.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -385,10 +407,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/MRDLNA/MRDLNA.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRDLNA.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +430,8 @@
 				6003F59E195388D20070C39A /* MRAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				8439C2CE209C38FD001125BC /* DLNASearchVC.m in Sources */,
+				8439C2CD209C38FD001125BC /* DLNAControlVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

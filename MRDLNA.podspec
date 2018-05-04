@@ -9,34 +9,40 @@
 Pod::Spec.new do |s|
   s.name             = 'MRDLNA'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MRDLNA.'
+  s.summary          = 'DLNA投屏'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  DLNA投屏,支持各大主流盒子互联网电视.
                        DESC
 
   s.homepage         = 'https://github.com/MQL9011/MRDLNA'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'MQL9011' => 'maqianli@ysten.com' }
+  s.author           = { 'MQL9011' => '301063915@qq.com' }
   s.source           = { :git => 'https://github.com/MQL9011/MRDLNA.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'http://cocomccree.cn/'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MRDLNA/Classes/**/*'
+  s.source_files = 'MRDLNA/Classes/ARC/**/*'
   
   # s.resource_bundles = {
   #   'MRDLNA' => ['MRDLNA/Assets/*.png']
   # }
-
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.libraries = 'icucore', 'c++', 'z', 'xml2'
+  
+  s.dependency 'CocoaAsyncSocket'
+  
+  s.xcconfig = {'ENABLE_BITCODE' => 'NO',
+      'HEADER_SEARCH_PATHS' => '${SDKROOT}/usr/include/libxml2',
+      'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
+  }
+  
+  s.subspec 'MRC' do |sp|
+      sp.source_files = 'MRDLNA/Classes/MRC/**/*'
+      sp.requires_arc = false
+  end
 end
