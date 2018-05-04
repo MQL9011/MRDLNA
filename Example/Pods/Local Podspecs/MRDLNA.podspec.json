@@ -1,0 +1,22 @@
+{
+  "name": "MRDLNA",
+  "version": "0.1.0",
+  "summary": "A short description of MRDLNA.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/MQL9011/MRDLNA",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "MQL9011": "maqianli@ysten.com"
+  },
+  "source": {
+    "git": "https://github.com/MQL9011/MRDLNA.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MRDLNA/Classes/**/*"
+}

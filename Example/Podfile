@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MRDLNA_Example' do
+  pod 'MRDLNA', :path => '../'
+
+  target 'MRDLNA_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

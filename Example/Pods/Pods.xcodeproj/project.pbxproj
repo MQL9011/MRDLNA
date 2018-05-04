@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		032A481C88E774613D8F06650253E5CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1D1DD695BA8A8CE20F22C16882700DA8 /* Pods-MRDLNA_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9074DAD0F76B1CE6BC56F6DAC6CD8B4 /* Pods-MRDLNA_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28FDFE8E9260E0108132E08A31761484 /* MRDLNA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 788AE08D27E6E3F59ED20E8BF7871293 /* MRDLNA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72347CDBDCFC52A1C76506D2A30F39FD /* Pods-MRDLNA_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E24AEEDA1549481629B4156B40DD17 /* Pods-MRDLNA_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86C029726BEBA6E99FD66BBE340BA49B /* Pods-MRDLNA_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C93B05F9D85898FBBBE8043DFCE299 /* Pods-MRDLNA_Tests-dummy.m */; };
+		BF31AED7750809207C6DE07305E642FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BFCA5F5EB05A2F4F9885944083D2EB06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		DD15C6F9B393C79D2AA1531B6C4D1B7C /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 234FF55B93B1B77DD51E98CFA9B81750 /* ReplaceMe.m */; };
+		EA105BCE19F09E2D244D1FA7BED16839 /* Pods-MRDLNA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFBA329422A01964122943F3E8FB32 /* Pods-MRDLNA_Example-dummy.m */; };
+		F0AB8EFD614D892AF1B72C96148E2BC4 /* MRDLNA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3418269CD2A91570E706BF03BCC782B2 /* MRDLNA-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1FB614894C5ECFF8271F84074A49082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E089504E91ED1FF7A45497E87CF69B9;
+			remoteInfo = MRDLNA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		074FE5DF4908E3AC7D3454B97885B531 /* Pods-MRDLNA_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		10CF757F2217D2A55924F8F013011EBE /* Pods-MRDLNA_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Tests-resources.sh"; sourceTree = "<group>"; };
+		234FF55B93B1B77DD51E98CFA9B81750 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = MRDLNA/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		25EFBA4AA7D118FEBD70350C9DCE7DE0 /* Pods-MRDLNA_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Example-resources.sh"; sourceTree = "<group>"; };
+		3418269CD2A91570E706BF03BCC782B2 /* MRDLNA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRDLNA-dummy.m"; sourceTree = "<group>"; };
+		36F9C408468231B4146CDCAC1899DE98 /* Pods-MRDLNA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		39F26C471C3CEAE522DF2802F333F52E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4373653AEE854C2DE8457AFB71FEBA21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BE05641A8AF05BC877D37D4E821FC66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA8E272A159A47C708C06BA52E18D0E /* MRDLNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRDLNA.framework; path = MRDLNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDFBA329422A01964122943F3E8FB32 /* Pods-MRDLNA_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRDLNA_Example-dummy.m"; sourceTree = "<group>"; };
+		6406A2D0ADCAB00DA307460BC7889B69 /* Pods_MRDLNA_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRDLNA_Tests.framework; path = "Pods-MRDLNA_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6E89FCD6D14D57B292FB5D1214C631AC /* MRDLNA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = MRDLNA.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6FFECF7A4A06F08CEE27C19C2F947A99 /* Pods-MRDLNA_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRDLNA_Example.modulemap"; sourceTree = "<group>"; };
+		71F05162ECE572305CBFCB9E5C699016 /* Pods-MRDLNA_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		72E4E60C050F73F5690B6E1252C6764F /* MRDLNA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRDLNA-prefix.pch"; sourceTree = "<group>"; };
+		784E39482CD7A836154154726068B9C3 /* Pods_MRDLNA_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRDLNA_Example.framework; path = "Pods-MRDLNA_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		788AE08D27E6E3F59ED20E8BF7871293 /* MRDLNA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRDLNA-umbrella.h"; sourceTree = "<group>"; };
+		7C4B08132FFC61AAD8F6193D9A0E264B /* Pods-MRDLNA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Example.release.xcconfig"; sourceTree = "<group>"; };
+		82B7F47B04D489541A0F3E3E90142F99 /* Pods-MRDLNA_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		970F74194C07DB9DDEA7DFA56EAEFA21 /* MRDLNA.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRDLNA.xcconfig; sourceTree = "<group>"; };
+		98C93B05F9D85898FBBBE8043DFCE299 /* Pods-MRDLNA_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRDLNA_Tests-dummy.m"; sourceTree = "<group>"; };
+		A290383A35668D087113EB21189A8115 /* Pods-MRDLNA_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A5E24AEEDA1549481629B4156B40DD17 /* Pods-MRDLNA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRDLNA_Example-umbrella.h"; sourceTree = "<group>"; };
+		A966A45D28CC025409EABB76C2E0154A /* MRDLNA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MRDLNA.modulemap; sourceTree = "<group>"; };
+		AF9DBF5244746AF0A642C7E2185AE22A /* Pods-MRDLNA_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B13833128D4F0A13BA513AF5EB998F3F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B9074DAD0F76B1CE6BC56F6DAC6CD8B4 /* Pods-MRDLNA_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRDLNA_Tests-umbrella.h"; sourceTree = "<group>"; };
+		BABC89690D62E7FC91197B11E66961D3 /* Pods-MRDLNA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA2D7688850DF082E1FBFDDD69D6E5DE /* Pods-MRDLNA_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRDLNA_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F6DCF1CF6FEB7E2331885D61E809BE83 /* Pods-MRDLNA_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRDLNA_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FAFF2B383E0A41D64F6799A09212F9B1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FEC142CDDF9C7DB961E7EAEA3B1FA4F6 /* Pods-MRDLNA_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRDLNA_Tests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63AEF597528ECDE11C5E5E62F02D59E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032A481C88E774613D8F06650253E5CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4EE33E2C25B9220E42A1C74B1F2BD65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF31AED7750809207C6DE07305E642FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4E1B787FCF27E62E0ADF54E86F126C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCA5F5EB05A2F4F9885944083D2EB06 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26674C87A2F45A13552991EC359CB92E /* Pods-MRDLNA_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4373653AEE854C2DE8457AFB71FEBA21 /* Info.plist */,
+				6FFECF7A4A06F08CEE27C19C2F947A99 /* Pods-MRDLNA_Example.modulemap */,
+				DA2D7688850DF082E1FBFDDD69D6E5DE /* Pods-MRDLNA_Example-acknowledgements.markdown */,
+				074FE5DF4908E3AC7D3454B97885B531 /* Pods-MRDLNA_Example-acknowledgements.plist */,
+				5CDFBA329422A01964122943F3E8FB32 /* Pods-MRDLNA_Example-dummy.m */,
+				AF9DBF5244746AF0A642C7E2185AE22A /* Pods-MRDLNA_Example-frameworks.sh */,
+				25EFBA4AA7D118FEBD70350C9DCE7DE0 /* Pods-MRDLNA_Example-resources.sh */,
+				A5E24AEEDA1549481629B4156B40DD17 /* Pods-MRDLNA_Example-umbrella.h */,
+				36F9C408468231B4146CDCAC1899DE98 /* Pods-MRDLNA_Example.debug.xcconfig */,
+				7C4B08132FFC61AAD8F6193D9A0E264B /* Pods-MRDLNA_Example.release.xcconfig */,
+			);
+			name = "Pods-MRDLNA_Example";
+			path = "Target Support Files/Pods-MRDLNA_Example";
+			sourceTree = "<group>";
+		};
+		296FB7C84718120C85DBFC466AEF1594 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B13833128D4F0A13BA513AF5EB998F3F /* LICENSE */,
+				6E89FCD6D14D57B292FB5D1214C631AC /* MRDLNA.podspec */,
+				FAFF2B383E0A41D64F6799A09212F9B1 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4506ACD9E9095D01E0F0D30C4573A58E /* Pods-MRDLNA_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				39F26C471C3CEAE522DF2802F333F52E /* Info.plist */,
+				FEC142CDDF9C7DB961E7EAEA3B1FA4F6 /* Pods-MRDLNA_Tests.modulemap */,
+				F6DCF1CF6FEB7E2331885D61E809BE83 /* Pods-MRDLNA_Tests-acknowledgements.markdown */,
+				82B7F47B04D489541A0F3E3E90142F99 /* Pods-MRDLNA_Tests-acknowledgements.plist */,
+				98C93B05F9D85898FBBBE8043DFCE299 /* Pods-MRDLNA_Tests-dummy.m */,
+				71F05162ECE572305CBFCB9E5C699016 /* Pods-MRDLNA_Tests-frameworks.sh */,
+				10CF757F2217D2A55924F8F013011EBE /* Pods-MRDLNA_Tests-resources.sh */,
+				B9074DAD0F76B1CE6BC56F6DAC6CD8B4 /* Pods-MRDLNA_Tests-umbrella.h */,
+				BABC89690D62E7FC91197B11E66961D3 /* Pods-MRDLNA_Tests.debug.xcconfig */,
+				A290383A35668D087113EB21189A8115 /* Pods-MRDLNA_Tests.release.xcconfig */,
+			);
+			name = "Pods-MRDLNA_Tests";
+			path = "Target Support Files/Pods-MRDLNA_Tests";
+			sourceTree = "<group>";
+		};
+		73C17ED8552119164D194A73CDE1C311 /* MRDLNA */ = {
+			isa = PBXGroup;
+			children = (
+				234FF55B93B1B77DD51E98CFA9B81750 /* ReplaceMe.m */,
+				296FB7C84718120C85DBFC466AEF1594 /* Pod */,
+				DACA835E1F238FF9B7BF421E7FE13E03 /* Support Files */,
+			);
+			name = MRDLNA;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				97D5695A2E9E0BF2F529B2D206969A2C /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C367D79FC6BF0E0DB20923CEA93464A9 /* Products */,
+				A44E946180BA8348924FE29BE2B7D190 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		97D5695A2E9E0BF2F529B2D206969A2C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73C17ED8552119164D194A73CDE1C311 /* MRDLNA */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A44E946180BA8348924FE29BE2B7D190 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				26674C87A2F45A13552991EC359CB92E /* Pods-MRDLNA_Example */,
+				4506ACD9E9095D01E0F0D30C4573A58E /* Pods-MRDLNA_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C367D79FC6BF0E0DB20923CEA93464A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CA8E272A159A47C708C06BA52E18D0E /* MRDLNA.framework */,
+				784E39482CD7A836154154726068B9C3 /* Pods_MRDLNA_Example.framework */,
+				6406A2D0ADCAB00DA307460BC7889B69 /* Pods_MRDLNA_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DACA835E1F238FF9B7BF421E7FE13E03 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BE05641A8AF05BC877D37D4E821FC66 /* Info.plist */,
+				A966A45D28CC025409EABB76C2E0154A /* MRDLNA.modulemap */,
+				970F74194C07DB9DDEA7DFA56EAEFA21 /* MRDLNA.xcconfig */,
+				3418269CD2A91570E706BF03BCC782B2 /* MRDLNA-dummy.m */,
+				72E4E60C050F73F5690B6E1252C6764F /* MRDLNA-prefix.pch */,
+				788AE08D27E6E3F59ED20E8BF7871293 /* MRDLNA-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MRDLNA";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		44EC3A71233AD02B73747B855C3A8630 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1DD695BA8A8CE20F22C16882700DA8 /* Pods-MRDLNA_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CD920663990D77B65FD6AB498AB3846 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FDFE8E9260E0108132E08A31761484 /* MRDLNA-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E4220879B69CB6B6DE46C940646CED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72347CDBDCFC52A1C76506D2A30F39FD /* Pods-MRDLNA_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E089504E91ED1FF7A45497E87CF69B9 /* MRDLNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B40004B7D4CB677500DB9B15F72BD7 /* Build configuration list for PBXNativeTarget "MRDLNA" */;
+			buildPhases = (
+				843618862EF81C446D04B25DD3E72304 /* Sources */,
+				E4E1B787FCF27E62E0ADF54E86F126C8 /* Frameworks */,
+				5CD920663990D77B65FD6AB498AB3846 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRDLNA;
+			productName = MRDLNA;
+			productReference = 5CA8E272A159A47C708C06BA52E18D0E /* MRDLNA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		642730CDE1AFA5005A1EF21CA2101891 /* Pods-MRDLNA_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56262765F3D0B681794F2778A8F13167 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Tests" */;
+			buildPhases = (
+				BF5C5D2832D23C3FD999FE45141CEC1F /* Sources */,
+				D4EE33E2C25B9220E42A1C74B1F2BD65 /* Frameworks */,
+				44EC3A71233AD02B73747B855C3A8630 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MRDLNA_Tests";
+			productName = "Pods-MRDLNA_Tests";
+			productReference = 6406A2D0ADCAB00DA307460BC7889B69 /* Pods_MRDLNA_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A210E33F5F6141FDC68A5FEFE687D705 /* Pods-MRDLNA_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61865474AA44808CABA223F9D7392AAE /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Example" */;
+			buildPhases = (
+				7C7C56E3472AA41D170C032E468F3091 /* Sources */,
+				63AEF597528ECDE11C5E5E62F02D59E5 /* Frameworks */,
+				A5E4220879B69CB6B6DE46C940646CED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				967DDA90A225924F17D5554B4F54687D /* PBXTargetDependency */,
+			);
+			name = "Pods-MRDLNA_Example";
+			productName = "Pods-MRDLNA_Example";
+			productReference = 784E39482CD7A836154154726068B9C3 /* Pods_MRDLNA_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C367D79FC6BF0E0DB20923CEA93464A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E089504E91ED1FF7A45497E87CF69B9 /* MRDLNA */,
+				A210E33F5F6141FDC68A5FEFE687D705 /* Pods-MRDLNA_Example */,
+				642730CDE1AFA5005A1EF21CA2101891 /* Pods-MRDLNA_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C7C56E3472AA41D170C032E468F3091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA105BCE19F09E2D244D1FA7BED16839 /* Pods-MRDLNA_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843618862EF81C446D04B25DD3E72304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AB8EFD614D892AF1B72C96148E2BC4 /* MRDLNA-dummy.m in Sources */,
+				DD15C6F9B393C79D2AA1531B6C4D1B7C /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5C5D2832D23C3FD999FE45141CEC1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C029726BEBA6E99FD66BBE340BA49B /* Pods-MRDLNA_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		967DDA90A225924F17D5554B4F54687D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRDLNA;
+			target = 3E089504E91ED1FF7A45497E87CF69B9 /* MRDLNA */;
+			targetProxy = A1FB614894C5ECFF8271F84074A49082 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		090D07C6127F190E9770A248E1FEECFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F9C408468231B4146CDCAC1899DE98 /* Pods-MRDLNA_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MRDLNA_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1A630E608078748288E589097AA7B794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4B08132FFC61AAD8F6193D9A0E264B /* Pods-MRDLNA_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MRDLNA_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3A72CE8215E30A93F34995B013D7990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970F74194C07DB9DDEA7DFA56EAEFA21 /* MRDLNA.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRDLNA/MRDLNA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRDLNA/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRDLNA/MRDLNA.modulemap";
+				PRODUCT_NAME = MRDLNA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45F32268DC8DDDDBF546DA07B5BA4561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970F74194C07DB9DDEA7DFA56EAEFA21 /* MRDLNA.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRDLNA/MRDLNA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRDLNA/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRDLNA/MRDLNA.modulemap";
+				PRODUCT_NAME = MRDLNA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		827269710C98D60C14D46BC6AF9BF728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		86BA7E048648C50E065FF8A1214287BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A290383A35668D087113EB21189A8115 /* Pods-MRDLNA_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MRDLNA_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B39324D1C1D3648C4634017923A8C45E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BABC89690D62E7FC91197B11E66961D3 /* Pods-MRDLNA_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MRDLNA_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */,
+				827269710C98D60C14D46BC6AF9BF728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56262765F3D0B681794F2778A8F13167 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B39324D1C1D3648C4634017923A8C45E /* Debug */,
+				86BA7E048648C50E065FF8A1214287BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61865474AA44808CABA223F9D7392AAE /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090D07C6127F190E9770A248E1FEECFE /* Debug */,
+				1A630E608078748288E589097AA7B794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B40004B7D4CB677500DB9B15F72BD7 /* Build configuration list for PBXNativeTarget "MRDLNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A72CE8215E30A93F34995B013D7990A /* Debug */,
+				45F32268DC8DDDDBF546DA07B5BA4561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
