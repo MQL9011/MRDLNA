@@ -1,0 +1,76 @@
+<root xmlns="urn:schemas-upnp-org:device-1-0" xmlns:qq="http://www.tencent.com">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion><device>
+        <deviceType>urn:schemas-upnp-org:device:MediaRenderer:1</deviceType>
+        <UDN>uuid:b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22</UDN>
+        <friendlyName>书房的小米电视</friendlyName>
+        <qq:X_QPlay_SoftwareCapability>QPlay:1</qq:X_QPlay_SoftwareCapability>
+        <manufacturer>Xiaomi</manufacturer>
+        <manufacturerURL>http://www.xiaomi.com/</manufacturerURL>
+        <modelDescription>Xiaomi MediaRenderer</modelDescription>
+        <modelName>Xiaomi MediaRenderer</modelName>
+        <modelNumber>1</modelNumber>
+        <modelURL>http://www.xiaomi.com/hezi</modelURL>
+        <serialNumber>55MC5BF9J19620A</serialNumber>
+        <presentationURL>device_presentation_page.html</presentationURL>
+        <UPC>123456789012</UPC>
+        <dlna:X_DLNADOC xmlns:dlna="urn:schemas-dlna-org:device-1-0">DMR-1.50</dlna:X_DLNADOC>
+        <dlna:X_DLNACAP xmlns:dlna="urn:schemas-dlna-org:device-1-0">,</dlna:X_DLNACAP>
+        <iconList>
+            <icon>
+                <mimetype>image/jpeg</mimetype>
+                <width>48</width>
+                <height>48</height>
+                <depth>8</depth>
+                <url>icon/icon048x048.jpeg</url>
+            </icon>
+            <icon>
+                <mimetype>image/png</mimetype>
+                <width>48</width>
+                <height>48</height>
+                <depth>8</depth>
+                <url>icon/icon048x048.png</url>
+            </icon>
+            <icon>
+                <mimetype>image/jpeg</mimetype>
+                <width>120</width>
+                <height>120</height>
+                <depth>8</depth>
+                <url>icon/icon120x120.jpeg</url>
+            </icon>
+            <icon>
+                <mimetype>image/png</mimetype>
+                <width>120</width>
+                <height>120</height>
+                <depth>8</depth>
+                <url>icon/icon120x120.png</url></icon>
+        </iconList>
+        <serviceList>
+            <service>
+                <serviceType>urn:schemas-upnp-org:service:AVTransport:1</serviceType>
+                <serviceId>urn:upnp-org:serviceId:AVTransport</serviceId>
+                <controlURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/AVTransport/action</controlURL>
+                <eventSubURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/AVTransport/event</eventSubURL>
+                <SCPDURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/AVTransport/desc.xml</SCPDURL>
+            </service>
+            <service>
+                <serviceType>urn:schemas-upnp-org:service:RenderingControl:1</serviceType>
+                <serviceId>urn:upnp-org:serviceId:RenderingControl</serviceId>
+                <controlURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/RenderingControl/action</controlURL>
+                <eventSubURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/RenderingControl/event</eventSubURL>
+                <SCPDURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/RenderingControl/desc.xml</SCPDURL>
+            </service>
+            <service>
+                <serviceType>urn:schemas-upnp-org:service:ConnectionManager:1</serviceType>
+                <serviceId>urn:upnp-org:serviceId:ConnectionManager</serviceId>
+                <controlURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/ConnectionManager/action</controlURL>
+                <eventSubURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/ConnectionManager/event</eventSubURL>
+                <SCPDURL>/dev/b8c9ae9e-fb7f-2f09-ffff-ffffc7831a22/svc/upnp-org/ConnectionManager/desc.xml</SCPDURL>
+            </service>
+        </serviceList>
+        <av:X_RController_DeviceInfo xmlns:av="urn:mi-com:av"><av:X_RController_Version>1.0</av:X_RController_Version><av:X_RController_ServiceList><av:X_RController_Service><av:X_RController_ServiceType>controller</av:X_RController_ServiceType><av:X_RController_ActionList_URL>http://192.168.1.4:6095/</av:X_RController_ActionList_URL></av:X_RController_Service><av:X_RController_Service><av:X_RController_ServiceType>data</av:X_RController_ServiceType><av:X_RController_ActionList_URL>http://api.tv.duokanbox.com/bolt/3party/</av:X_RController_ActionList_URL></av:X_RController_Service></av:X_RController_ServiceList>
+        </av:X_RController_DeviceInfo>
+    </device>
+</root>

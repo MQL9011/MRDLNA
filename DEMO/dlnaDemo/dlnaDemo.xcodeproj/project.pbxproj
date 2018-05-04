@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E364955AC159B2AF2F3CC17 /* Pods_dlnaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8409E4E15EDD11CA8441D3FB /* Pods_dlnaDemo.framework */; };
+		8439C2DD209C46D1001125BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2DC209C46D1001125BC /* AppDelegate.m */; };
+		8439C2E0209C46D1001125BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2DF209C46D1001125BC /* ViewController.m */; };
+		8439C2E3209C46D1001125BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2E1209C46D1001125BC /* Main.storyboard */; };
+		8439C2E5209C46D3001125BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2E4209C46D3001125BC /* Assets.xcassets */; };
+		8439C2E8209C46D3001125BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2E6209C46D3001125BC /* LaunchScreen.storyboard */; };
+		8439C2EB209C46D3001125BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2EA209C46D3001125BC /* main.m */; };
+		8439C2F2209C46DF001125BC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2F1209C46DF001125BC /* Podfile */; };
+		8439C2FB209C4786001125BC /* DLNAControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2F6209C4786001125BC /* DLNAControlVC.xib */; };
+		8439C2FC209C4786001125BC /* DLNAControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2F7209C4786001125BC /* DLNAControlVC.m */; };
+		8439C2FD209C4786001125BC /* DLNASearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2F8209C4786001125BC /* DLNASearchVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4394F39F9EAC95977CF193C6 /* Pods-dlnaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dlnaDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8409E4E15EDD11CA8441D3FB /* Pods_dlnaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dlnaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8439C2D8209C46D1001125BC /* dlnaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dlnaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8439C2DB209C46D1001125BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8439C2DC209C46D1001125BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8439C2DE209C46D1001125BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8439C2DF209C46D1001125BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8439C2E2209C46D1001125BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8439C2E4209C46D3001125BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8439C2E7209C46D3001125BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8439C2E9209C46D3001125BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8439C2EA209C46D3001125BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8439C2F1209C46DF001125BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../../Example/Podfile; sourceTree = "<group>"; };
+		8439C2F6209C4786001125BC /* DLNAControlVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLNAControlVC.xib; sourceTree = "<group>"; };
+		8439C2F7209C4786001125BC /* DLNAControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAControlVC.m; sourceTree = "<group>"; };
+		8439C2F8209C4786001125BC /* DLNASearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNASearchVC.m; sourceTree = "<group>"; };
+		8439C2F9209C4786001125BC /* DLNAControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAControlVC.h; sourceTree = "<group>"; };
+		8439C2FA209C4786001125BC /* DLNASearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNASearchVC.h; sourceTree = "<group>"; };
+		CCFF7A01198635B65AF79FA8 /* Pods-dlnaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dlnaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8439C2D5209C46D1001125BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E364955AC159B2AF2F3CC17 /* Pods_dlnaDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8439C2CF209C46D1001125BC = {
+			isa = PBXGroup;
+			children = (
+				8439C2F1209C46DF001125BC /* Podfile */,
+				8439C2DA209C46D1001125BC /* dlnaDemo */,
+				8439C2D9209C46D1001125BC /* Products */,
+				BEF471A6956CEEA5DF3A7966 /* Pods */,
+				89E33D331AE0870DC3756344 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8439C2D9209C46D1001125BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8439C2D8209C46D1001125BC /* dlnaDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8439C2DA209C46D1001125BC /* dlnaDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8439C2DB209C46D1001125BC /* AppDelegate.h */,
+				8439C2DC209C46D1001125BC /* AppDelegate.m */,
+				8439C2DE209C46D1001125BC /* ViewController.h */,
+				8439C2DF209C46D1001125BC /* ViewController.m */,
+				8439C2F5209C4786001125BC /* DLNA_Play */,
+				8439C2E1209C46D1001125BC /* Main.storyboard */,
+				8439C2E4209C46D3001125BC /* Assets.xcassets */,
+				8439C2E6209C46D3001125BC /* LaunchScreen.storyboard */,
+				8439C2E9209C46D3001125BC /* Info.plist */,
+				8439C2EA209C46D3001125BC /* main.m */,
+			);
+			path = dlnaDemo;
+			sourceTree = "<group>";
+		};
+		8439C2F5209C4786001125BC /* DLNA_Play */ = {
+			isa = PBXGroup;
+			children = (
+				8439C2F6209C4786001125BC /* DLNAControlVC.xib */,
+				8439C2F7209C4786001125BC /* DLNAControlVC.m */,
+				8439C2F8209C4786001125BC /* DLNASearchVC.m */,
+				8439C2F9209C4786001125BC /* DLNAControlVC.h */,
+				8439C2FA209C4786001125BC /* DLNASearchVC.h */,
+			);
+			name = DLNA_Play;
+			path = ../../../Example/MRDLNA/DLNA_Play;
+			sourceTree = "<group>";
+		};
+		89E33D331AE0870DC3756344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8409E4E15EDD11CA8441D3FB /* Pods_dlnaDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEF471A6956CEEA5DF3A7966 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCFF7A01198635B65AF79FA8 /* Pods-dlnaDemo.debug.xcconfig */,
+				4394F39F9EAC95977CF193C6 /* Pods-dlnaDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8439C2D7209C46D1001125BC /* dlnaDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8439C2EE209C46D3001125BC /* Build configuration list for PBXNativeTarget "dlnaDemo" */;
+			buildPhases = (
+				51FF532FD5A974AAB809A374 /* [CP] Check Pods Manifest.lock */,
+				8439C2D4209C46D1001125BC /* Sources */,
+				8439C2D5209C46D1001125BC /* Frameworks */,
+				8439C2D6209C46D1001125BC /* Resources */,
+				2FD38F7B2A58E96F87E9789D /* [CP] Embed Pods Frameworks */,
+				D9836F11FD2EDA847CCA8B87 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dlnaDemo;
+			productName = dlnaDemo;
+			productReference = 8439C2D8209C46D1001125BC /* dlnaDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8439C2D0209C46D1001125BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = mccree;
+				TargetAttributes = {
+					8439C2D7209C46D1001125BC = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 8439C2D3209C46D1001125BC /* Build configuration list for PBXProject "dlnaDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8439C2CF209C46D1001125BC;
+			productRefGroup = 8439C2D9209C46D1001125BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8439C2D7209C46D1001125BC /* dlnaDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8439C2D6209C46D1001125BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8439C2FB209C4786001125BC /* DLNAControlVC.xib in Resources */,
+				8439C2E8209C46D3001125BC /* LaunchScreen.storyboard in Resources */,
+				8439C2E5209C46D3001125BC /* Assets.xcassets in Resources */,
+				8439C2F2209C46DF001125BC /* Podfile in Resources */,
+				8439C2E3209C46D1001125BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FD38F7B2A58E96F87E9789D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/MRDLNA/MRDLNA.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRDLNA.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51FF532FD5A974AAB809A374 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dlnaDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9836F11FD2EDA847CCA8B87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8439C2D4209C46D1001125BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8439C2E0209C46D1001125BC /* ViewController.m in Sources */,
+				8439C2EB209C46D3001125BC /* main.m in Sources */,
+				8439C2DD209C46D1001125BC /* AppDelegate.m in Sources */,
+				8439C2FD209C4786001125BC /* DLNASearchVC.m in Sources */,
+				8439C2FC209C4786001125BC /* DLNAControlVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8439C2E1209C46D1001125BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8439C2E2209C46D1001125BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8439C2E6209C46D3001125BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8439C2E7209C46D3001125BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8439C2EC209C46D3001125BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8439C2ED209C46D3001125BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8439C2EF209C46D3001125BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCFF7A01198635B65AF79FA8 /* Pods-dlnaDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZKS27B88S;
+				INFOPLIST_FILE = dlnaDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mccree.dlnaDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8439C2F0209C46D3001125BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4394F39F9EAC95977CF193C6 /* Pods-dlnaDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZKS27B88S;
+				INFOPLIST_FILE = dlnaDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mccree.dlnaDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8439C2D3209C46D1001125BC /* Build configuration list for PBXProject "dlnaDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8439C2EC209C46D3001125BC /* Debug */,
+				8439C2ED209C46D3001125BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8439C2EE209C46D3001125BC /* Build configuration list for PBXNativeTarget "dlnaDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8439C2EF209C46D3001125BC /* Debug */,
+				8439C2F0209C46D3001125BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8439C2D0209C46D1001125BC /* Project object */;
+}

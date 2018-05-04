@@ -1,0 +1,6 @@
+framework module Pods_dlnaDemo {
+  umbrella header "Pods-dlnaDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
