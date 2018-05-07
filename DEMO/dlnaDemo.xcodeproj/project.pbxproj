@@ -14,10 +14,10 @@
 		8439C2E5209C46D3001125BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2E4209C46D3001125BC /* Assets.xcassets */; };
 		8439C2E8209C46D3001125BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2E6209C46D3001125BC /* LaunchScreen.storyboard */; };
 		8439C2EB209C46D3001125BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2EA209C46D3001125BC /* main.m */; };
-		8439C2F2209C46DF001125BC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2F1209C46DF001125BC /* Podfile */; };
-		8439C2FB209C4786001125BC /* DLNAControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439C2F6209C4786001125BC /* DLNAControlVC.xib */; };
-		8439C2FC209C4786001125BC /* DLNAControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2F7209C4786001125BC /* DLNAControlVC.m */; };
-		8439C2FD209C4786001125BC /* DLNASearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C2F8209C4786001125BC /* DLNASearchVC.m */; };
+		8439C325209FEA81001125BC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8439C324209FEA81001125BC /* Podfile */; };
+		8439C32C209FEAAD001125BC /* DLNAControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439C327209FEAAD001125BC /* DLNAControlVC.xib */; };
+		8439C32D209FEAAD001125BC /* DLNAControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C328209FEAAD001125BC /* DLNAControlVC.m */; };
+		8439C32E209FEAAD001125BC /* DLNASearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439C329209FEAAD001125BC /* DLNASearchVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +33,12 @@
 		8439C2E7209C46D3001125BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8439C2E9209C46D3001125BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8439C2EA209C46D3001125BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8439C2F1209C46DF001125BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../../Example/Podfile; sourceTree = "<group>"; };
-		8439C2F6209C4786001125BC /* DLNAControlVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLNAControlVC.xib; sourceTree = "<group>"; };
-		8439C2F7209C4786001125BC /* DLNAControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAControlVC.m; sourceTree = "<group>"; };
-		8439C2F8209C4786001125BC /* DLNASearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNASearchVC.m; sourceTree = "<group>"; };
-		8439C2F9209C4786001125BC /* DLNAControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAControlVC.h; sourceTree = "<group>"; };
-		8439C2FA209C4786001125BC /* DLNASearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNASearchVC.h; sourceTree = "<group>"; };
+		8439C324209FEA81001125BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		8439C327209FEAAD001125BC /* DLNAControlVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLNAControlVC.xib; sourceTree = "<group>"; };
+		8439C328209FEAAD001125BC /* DLNAControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAControlVC.m; sourceTree = "<group>"; };
+		8439C329209FEAAD001125BC /* DLNASearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNASearchVC.m; sourceTree = "<group>"; };
+		8439C32A209FEAAD001125BC /* DLNAControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAControlVC.h; sourceTree = "<group>"; };
+		8439C32B209FEAAD001125BC /* DLNASearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNASearchVC.h; sourceTree = "<group>"; };
 		CCFF7A01198635B65AF79FA8 /* Pods-dlnaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dlnaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +57,7 @@
 		8439C2CF209C46D1001125BC = {
 			isa = PBXGroup;
 			children = (
-				8439C2F1209C46DF001125BC /* Podfile */,
+				8439C324209FEA81001125BC /* Podfile */,
 				8439C2DA209C46D1001125BC /* dlnaDemo */,
 				8439C2D9209C46D1001125BC /* Products */,
 				BEF471A6956CEEA5DF3A7966 /* Pods */,
@@ -80,7 +80,7 @@
 				8439C2DC209C46D1001125BC /* AppDelegate.m */,
 				8439C2DE209C46D1001125BC /* ViewController.h */,
 				8439C2DF209C46D1001125BC /* ViewController.m */,
-				8439C2F5209C4786001125BC /* DLNA_Play */,
+				8439C326209FEAAD001125BC /* DLNA_Play */,
 				8439C2E1209C46D1001125BC /* Main.storyboard */,
 				8439C2E4209C46D3001125BC /* Assets.xcassets */,
 				8439C2E6209C46D3001125BC /* LaunchScreen.storyboard */,
@@ -90,17 +90,16 @@
 			path = dlnaDemo;
 			sourceTree = "<group>";
 		};
-		8439C2F5209C4786001125BC /* DLNA_Play */ = {
+		8439C326209FEAAD001125BC /* DLNA_Play */ = {
 			isa = PBXGroup;
 			children = (
-				8439C2F6209C4786001125BC /* DLNAControlVC.xib */,
-				8439C2F7209C4786001125BC /* DLNAControlVC.m */,
-				8439C2F8209C4786001125BC /* DLNASearchVC.m */,
-				8439C2F9209C4786001125BC /* DLNAControlVC.h */,
-				8439C2FA209C4786001125BC /* DLNASearchVC.h */,
+				8439C327209FEAAD001125BC /* DLNAControlVC.xib */,
+				8439C328209FEAAD001125BC /* DLNAControlVC.m */,
+				8439C329209FEAAD001125BC /* DLNASearchVC.m */,
+				8439C32A209FEAAD001125BC /* DLNAControlVC.h */,
+				8439C32B209FEAAD001125BC /* DLNASearchVC.h */,
 			);
-			name = DLNA_Play;
-			path = ../../../Example/MRDLNA/DLNA_Play;
+			path = DLNA_Play;
 			sourceTree = "<group>";
 		};
 		89E33D331AE0870DC3756344 /* Frameworks */ = {
@@ -180,10 +179,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439C2FB209C4786001125BC /* DLNAControlVC.xib in Resources */,
+				8439C325209FEA81001125BC /* Podfile in Resources */,
 				8439C2E8209C46D3001125BC /* LaunchScreen.storyboard in Resources */,
+				8439C32C209FEAAD001125BC /* DLNAControlVC.xib in Resources */,
 				8439C2E5209C46D3001125BC /* Assets.xcassets in Resources */,
-				8439C2F2209C46DF001125BC /* Podfile in Resources */,
 				8439C2E3209C46D1001125BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,9 +252,9 @@
 			files = (
 				8439C2E0209C46D1001125BC /* ViewController.m in Sources */,
 				8439C2EB209C46D3001125BC /* main.m in Sources */,
+				8439C32E209FEAAD001125BC /* DLNASearchVC.m in Sources */,
 				8439C2DD209C46D1001125BC /* AppDelegate.m in Sources */,
-				8439C2FD209C4786001125BC /* DLNASearchVC.m in Sources */,
-				8439C2FC209C4786001125BC /* DLNAControlVC.m in Sources */,
+				8439C32D209FEAAD001125BC /* DLNAControlVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
