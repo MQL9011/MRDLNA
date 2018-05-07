@@ -1,6 +1,6 @@
 {
   "name": "MRDLNA",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "DLNA投屏",
   "description": "DLNA投屏,支持各大主流盒子互联网电视.",
   "homepage": "https://github.com/MQL9011/MRDLNA",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MQL9011/MRDLNA.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "social_media_url": "http://cocomccree.cn/",
   "platforms": {
