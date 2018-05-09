@@ -91,7 +91,8 @@ pod 'MRDLNA'
 
 # For more information please see demo
 
-# License
-MIT
+## License
+
+WTFPL – Do What the Fuck You Want to Public License
 
 
