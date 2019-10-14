@@ -68,6 +68,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //测试视频如果太短，快进时会直接结束，建议找长一点的视频测试
     NSString *testUrl = @"http://223.110.239.40:6060/cntvmobile/vod/p_cntvmobile00000000000020150518/m_cntvmobile00000000000659727681";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row < self.deviceArr.count) {
