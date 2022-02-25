@@ -141,7 +141,6 @@
 #pragma mark -- 搜索协议CLUPnPDeviceDelegate回调
 - (void)upnpSearchChangeWithResults:(NSArray<CLUPnPDevice *> *)devices{
     NSMutableArray *deviceMarr = [NSMutableArray array];
-    NSLog(@"%@",devices);
     for (CLUPnPDevice *device in devices) {
         // 只返回匹配到视频播放的设备
         if ([device.uuid containsString:serviceType_AVTransport]) {

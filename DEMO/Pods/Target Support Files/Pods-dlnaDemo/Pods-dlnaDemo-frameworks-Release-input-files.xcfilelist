@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-dlnaDemo/Pods-dlnaDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/MRDLNA/MRDLNA.framework
