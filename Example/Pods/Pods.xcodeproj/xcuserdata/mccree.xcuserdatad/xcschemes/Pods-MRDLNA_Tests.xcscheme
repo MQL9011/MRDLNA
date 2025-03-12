@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3D133736615D25181CFFC407B5895BD4"
-               BuildableName = "MRDLNA.framework"
-               BlueprintName = "MRDLNA"
+               BlueprintIdentifier = "52BDCC01F7A92F369AF2EA20D6D5AA10"
+               BuildableName = "Pods_MRDLNA_Tests.framework"
+               BlueprintName = "Pods-MRDLNA_Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

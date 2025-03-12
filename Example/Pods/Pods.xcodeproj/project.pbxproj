@@ -7,493 +7,479 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13F5355AE4B791722FE9D0D6F7190CAB /* CLUPnPResponseDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 71C11A8C05F4AB5182177B19E0757ACD /* CLUPnPResponseDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		175278A856242A4C4ED83BBE79F852F6 /* MRDLNA.h in Headers */ = {isa = PBXBuildFile; fileRef = 58BF326CCB6553A9F05B5F17100711C7 /* MRDLNA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D1DD695BA8A8CE20F22C16882700DA8 /* Pods-MRDLNA_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9074DAD0F76B1CE6BC56F6DAC6CD8B4 /* Pods-MRDLNA_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CAD733C2968680FD0824C52C299D26D /* CLUPnPRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4BB907B4C41792AB5EC91961C4FCDF2 /* CLUPnPRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAA98C8614A6DED26CE8712531AE1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
-		306AFB593794C109ECC8D859E0973A0C /* Device.xml in Sources */ = {isa = PBXBuildFile; fileRef = 9D04B5A0F87ABC4F3E56F5920B9C8B31 /* Device.xml */; };
-		3E5F5D6E03B396AF85AFDD0DA58135D9 /* CLUPnP.h in Headers */ = {isa = PBXBuildFile; fileRef = C651D454CDF25A9A5C7E4FD29865AB52 /* CLUPnP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B9A8ECDCF25E76EEC435AD20A8FA563 /* SetUrl.xml in Sources */ = {isa = PBXBuildFile; fileRef = 891424E9E48DA0697E319EE9CF4C61B8 /* SetUrl.xml */; };
-		5FA04447BEE04565C124E44FC055F41C /* StopAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E21EADA73A0E9BADB673270A4DFB8BA7 /* StopAction.m */; };
-		69E23705E7F2F76D89CD3F43FC43E98F /* CLUPnPAVPositionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4284E0F9D9DFAAE4D41E8842277661 /* CLUPnPAVPositionInfo.m */; };
-		7022DF8916EEDF308AF3FEB936CAFB4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
-		73533AA3DA69AEAB0757523E610A6C24 /* CLUPnPRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7114F93CB5D6B11EF3FC7F80538DEE47 /* CLUPnPRenderer.m */; };
-		77FA9968BE150F66BBCF8FC9777E9BD3 /* CLUPnPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F0AA83B32C2F5E6466E5DA6F07B82185 /* CLUPnPDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A2A231BF626077D067B151938E92644 /* CLUPnPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6AF641D75AEC9B4FB04FE57649E5FA /* CLUPnPServer.m */; };
-		7E4F0161B4D135DA3A0763619A56C2F5 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A150BFDFB60879728DB1958A240D4383 /* CocoaAsyncSocket-dummy.m */; };
-		8480493AEC1C7AF1B5C0E0BF2F70FB44 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9509718CFCC3D81230AA7CF02478B7 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		86C029726BEBA6E99FD66BBE340BA49B /* Pods-MRDLNA_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C93B05F9D85898FBBBE8043DFCE299 /* Pods-MRDLNA_Tests-dummy.m */; };
-		876A93E76F674EB6A3EC710F04CC9F33 /* CLUPnPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 759BCA2D9DB6C88276944C63CFD41C6F /* CLUPnPDevice.m */; };
-		8830E25ECC6B6BA7562AA07296B9265E /* MRDLNA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1B186189C1B1BB61AFC21E03640CD6 /* MRDLNA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8835E349C6C5861490952E27C029763F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
-		89F66F446DA7B8079C1EB93A9A9F00CB /* CLUPnPAVPositionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 5129D6F607DE39C61C93C80E91AF2010 /* CLUPnPAVPositionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		930694138A14539AD42F26A324B3E19F /* CLUPnPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732A0099444F49858D371177ABE10C1 /* CLUPnPAction.m */; };
-		948E818D9E104EFEADD7B3948CC3B3DE /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D61A3D1020407D7235F834CB4634E6B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A882891E5A89CADF96C2CA79606409CA /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = D82B81E88C7D98976B018DB4903B5D0C /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7DC2A21843CD99040DCD79FF3BE91B /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30CCCF41576100268BFA48C3EED9517C /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEE9644DA0EFCF945438E125BA4F0724 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9235AEFD042C8D96AF4B4AA61E18C420 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B404DD3D44E99DCDE15342F348FC3690 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CC16E8B9087C97BB7D62126035251F6D /* GDataXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B688B80E8B12B7F6988B29DC592DA94D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7E85CD06FB5B7EAC4FAD953117F2D2 /* Security.framework */; };
-		BF31AED7750809207C6DE07305E642FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
-		C6ADCCC41C33152B178F3A693009BCCD /* StopAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B90FA1BC4834B537F3E4483F17E62E /* StopAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCCEB35695D2CC9E78DA4754D76A02DD /* MRDLNA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BB11CD0500B6B85F0AC0F38E854014 /* MRDLNA-dummy.m */; };
-		D01B2EBC1AB52980422F5A831BBCE3F4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18CCAEB371EC97E5B9FA432AB0D5F33 /* CFNetwork.framework */; };
-		D0F2504B015906435B8E7A619DC3C7E9 /* Pods-MRDLNA_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E24AEEDA1549481629B4156B40DD17 /* Pods-MRDLNA_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2E17B4C8457DA9E10CE30F028ABEA34 /* CLUPnPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3856639BB69D41D227F0DDC75AAF4381 /* CLUPnPAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCB982522605E72D5AB6BE32A888AA5D /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BA6F6CCD385509DC9FF3B1ACE3E309 /* CocoaAsyncSocket.framework */; };
-		E4230DB0D114C94B081018C1AC1E9972 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8C213E138128F7803201DCD578F6D0 /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4E821E53E3159FFD19C1896B9A835EE /* MRDLNA.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E47CF40FEE47DA155D5859A8F3CF07 /* MRDLNA.m */; };
-		F7E9DA799517A1324837F1C4AE2BC3AC /* Pods-MRDLNA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFBA329422A01964122943F3E8FB32 /* Pods-MRDLNA_Example-dummy.m */; };
-		F9963519CC6256EAFCA153D36DFD2D10 /* CLUPnPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A5ADA90E88F97BC0611F451A515137B8 /* CLUPnPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B9ABB97AED266EA6551AFAB0E0C699C /* SetUrl.xml in Sources */ = {isa = PBXBuildFile; fileRef = 61A56B81BD32839B1B3CDA350CB01145 /* SetUrl.xml */; };
+		0E21646F1AD97CAB727EB9CCBD3C73DC /* Pods-MRDLNA_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E37E8C70836EF9E38BF86A5BC5EAB4 /* Pods-MRDLNA_Example-dummy.m */; };
+		118F5CDD7173B308B8EAA90C7FE423CC /* Pods-MRDLNA_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B062B31EA8546EA95196B782858A57 /* Pods-MRDLNA_Tests-dummy.m */; };
+		1F6AB16147E2AEEAB8776F03A62D1B9B /* MRDLNA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5287796B63D5086CB873AA24D175EEA5 /* MRDLNA.m */; };
+		20B76E5452BEC1513432FA8254651C43 /* CLUPnPAVPositionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0F5117529674EABA368BE9F8CE45DE /* CLUPnPAVPositionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23A0A54438EF16261BDF092EAF9DB5A7 /* MRDLNA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 312DB2E47F704D19A24C794BE79F266C /* MRDLNA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26F87A3DC73299D66231DFE835E9C13D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		33A88215D5655DDBF56DEAA41CC8D8DA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */; };
+		35BF44C21A5D253DA86B718E2383F752 /* CLUPnPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D50A2C279EC8CF69CFE9A5B6299D5134 /* CLUPnPDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		414DA16755C3B48053361609B780665E /* CLUPnPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = B61712AB73AEFCE653B582A125DDC57E /* CLUPnPAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		435A825F00C4E0FDF2B5471124F1D3E6 /* CLUPnPResponseDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3058ACD2E7EE3F4A004E752C7E70B68B /* CLUPnPResponseDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47B08F146531867C1AC50104F643C9F3 /* StopAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D967D70D5F44AFD67C4BBEE7BA691756 /* StopAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DFA68793C451440B7C0E05E02BDFB3B /* CLUPnP.h in Headers */ = {isa = PBXBuildFile; fileRef = 4276ECA0CE3BF5341F43C9F25CC74073 /* CLUPnP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		666B0EBF8E0A814C7282DF4AEBC4364D /* CLUPnPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 67895FF9864B0DFF970DC863ED5080FC /* CLUPnPAction.m */; };
+		66D475865216567868C070E412FEB939 /* MRDLNA.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D0402D33BC6F2B9506C057D869444B /* MRDLNA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67A4DC4B4DB5321811BC3D3627AE855E /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9374467D9662C558DC594371C21B1B16 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BFD316D612711201623EC7372E84051 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 46543676111F76719BAF7A5EFD190342 /* GDataXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FBBBA44942624EB9962985F1D5B6E1B /* CLUPnPAVPositionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E8C88853C81FBBF40782F29BBBD11 /* CLUPnPAVPositionInfo.m */; };
+		7150127FF831BBBF227B57F873608405 /* MRDLNA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F7E4DBF644D93164C7BA1F397CCEA3 /* MRDLNA-dummy.m */; };
+		76726391061B01393FCAA24326EC0DBF /* CLUPnPRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = FF4F184421C328BA962A486C93CF4E90 /* CLUPnPRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C1DD31A3A7A0FBBA1A9C88A92CAA28C /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87D53D2468F4A76F969B555628969C00 /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C99B75EB476B15715CE8ACBE246F421 /* CLUPnPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C56EF951CBFADA946BCB9EFAFF6BCD /* CLUPnPServer.m */; };
+		8861DA09219E12C0A1DBA07EB1CEB94A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */; };
+		894C208C5A0D84DCE66BE68D7CEB546E /* CLUPnPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CB35B07FAFB76EA3E7AF7BA2ED7FE3 /* CLUPnPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9813A8FAFB4A425C0ABA6704F30C5FCA /* CLUPnPRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE45AB54C7014DD0EBA4D6A78CAAF7E /* CLUPnPRenderer.m */; };
+		A1D18D147BFB3AC869A50A18426F67C2 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1102168A8F594CAD4473CE07775B4 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE1E10DD083236A0462A21FB4DE07BE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		B058A71B2F1A38EDF01F7153BB9AFE79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		B19D3C79B36157522E7662E737D558EF /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C8710A4087DF748E081735FBBBC2E72B /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B68CC7C5F59BFBCC623FC14F49293F91 /* Device.xml in Sources */ = {isa = PBXBuildFile; fileRef = FBEBC8D6C943A3AB5EF8F4E9E697A6E9 /* Device.xml */; };
+		B8F629D400B89D705FE876EEF1F31689 /* CLUPnPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 249EE1D705F384D15B4F687F964318A3 /* CLUPnPDevice.m */; };
+		C2DFA93DF25F018AA81E9D441E1CAF26 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A9B6CEB7A4373DC0D4DCB1C9C5E465 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C577175BC7C3EA73248A5CB041587053 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DEE8A2C9D85B1AE3111A98DABA3911 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CBAA830E4F43D7A6DBBDE378713ADDD0 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2F280BBE43CE867EB51D76410E472 /* CocoaAsyncSocket-dummy.m */; };
+		CBE5E2E4477D0D33CDF989AC51894582 /* Pods-MRDLNA_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B27EE227F860B252A2A029A0C7CC0D /* Pods-MRDLNA_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7AD3D469A88AC4BFC7BEBFF17D5B5C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		E7FD421F839A72F3EAFE88A467B135E9 /* StopAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B88418120813D119918A466C58805E /* StopAction.m */; };
+		EDAA03B6B5C664D3AE15F5EB1E20CAB9 /* Pods-MRDLNA_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 764986A6C4E22EA21D9D33BF7A306061 /* Pods-MRDLNA_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6B9D1DEDD45848D600287540E4009E69 /* PBXContainerItemProxy */ = {
+		5F72030849CDF36B821DF04AEEDCCD86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AC0D2D2B4EE7C873431AB3502859CA60;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		CAE02F97838F426A887F57302DDFE56F /* PBXContainerItemProxy */ = {
+		6376091D40F56236751AC77C8394A5F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AC0D2D2B4EE7C873431AB3502859CA60;
-			remoteInfo = CocoaAsyncSocket;
-		};
-		F4646E04A07B0E6EFCBD1E508C33FB34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4210AEC0F80D8530761D8C40F26415AD;
+			remoteGlobalIDString = 3D133736615D25181CFFC407B5895BD4;
 			remoteInfo = MRDLNA;
+		};
+		785505CF5FFC463D614C7D22400ADEE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		F74582CEFEEE37A2AC75976E062C26A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA641B3FFF861FF43DFAD734C9BC18C;
+			remoteInfo = "Pods-MRDLNA_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0469EC467755C444DC684A90770240B4 /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
-		074FE5DF4908E3AC7D3454B97885B531 /* Pods-MRDLNA_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		0A4284E0F9D9DFAAE4D41E8842277661 /* CLUPnPAVPositionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPAVPositionInfo.m; sourceTree = "<group>"; };
-		0C6AF641D75AEC9B4FB04FE57649E5FA /* CLUPnPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPServer.m; sourceTree = "<group>"; };
-		10CF757F2217D2A55924F8F013011EBE /* Pods-MRDLNA_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Tests-resources.sh"; sourceTree = "<group>"; };
-		18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		25EFBA4AA7D118FEBD70350C9DCE7DE0 /* Pods-MRDLNA_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Example-resources.sh"; sourceTree = "<group>"; };
-		26446C934AC5390532FB7A431359FC7A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26B90FA1BC4834B537F3E4483F17E62E /* StopAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StopAction.h; sourceTree = "<group>"; };
-		28A334E6643D489A64B05AAFCF94D815 /* MRDLNA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRDLNA-prefix.pch"; sourceTree = "<group>"; };
-		2B7D50360D2407BF9D5B4F34C957A9E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30CCCF41576100268BFA48C3EED9517C /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		330814B3C2DDA66B814375BBD80FEBE6 /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
-		36F9C408468231B4146CDCAC1899DE98 /* Pods-MRDLNA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3856639BB69D41D227F0DDC75AAF4381 /* CLUPnPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPAction.h; sourceTree = "<group>"; };
-		39F26C471C3CEAE522DF2802F333F52E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4373653AEE854C2DE8457AFB71FEBA21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E2257637EA4BC39571C57D70833292F /* Pods_MRDLNA_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRDLNA_Tests.framework; path = "Pods-MRDLNA_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5129D6F607DE39C61C93C80E91AF2010 /* CLUPnPAVPositionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPAVPositionInfo.h; sourceTree = "<group>"; };
-		58BF326CCB6553A9F05B5F17100711C7 /* MRDLNA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRDLNA.h; path = MRDLNA/Classes/ARC/MRDLNA.h; sourceTree = "<group>"; };
-		5A1B186189C1B1BB61AFC21E03640CD6 /* MRDLNA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRDLNA-umbrella.h"; sourceTree = "<group>"; };
-		5A7E85CD06FB5B7EAC4FAD953117F2D2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		5CDFBA329422A01964122943F3E8FB32 /* Pods-MRDLNA_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRDLNA_Example-dummy.m"; sourceTree = "<group>"; };
-		6732A0099444F49858D371177ABE10C1 /* CLUPnPAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPAction.m; sourceTree = "<group>"; };
-		696753A1D194D5120DB5BAB41EB62630 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		6FFECF7A4A06F08CEE27C19C2F947A99 /* Pods-MRDLNA_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRDLNA_Example.modulemap"; sourceTree = "<group>"; };
-		7114F93CB5D6B11EF3FC7F80538DEE47 /* CLUPnPRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPRenderer.m; sourceTree = "<group>"; };
-		71C11A8C05F4AB5182177B19E0757ACD /* CLUPnPResponseDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPResponseDelegate.h; sourceTree = "<group>"; };
-		71F05162ECE572305CBFCB9E5C699016 /* Pods-MRDLNA_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		759BCA2D9DB6C88276944C63CFD41C6F /* CLUPnPDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPDevice.m; sourceTree = "<group>"; };
-		7C4B08132FFC61AAD8F6193D9A0E264B /* Pods-MRDLNA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Example.release.xcconfig"; sourceTree = "<group>"; };
-		82B7F47B04D489541A0F3E3E90142F99 /* Pods-MRDLNA_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		891424E9E48DA0697E319EE9CF4C61B8 /* SetUrl.xml */ = {isa = PBXFileReference; includeInIndex = 1; path = SetUrl.xml; sourceTree = "<group>"; };
-		8AC456B279E740FFCD4333EE36CDB209 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8D61A3D1020407D7235F834CB4634E6B /* GDataXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = MRDLNA/Classes/MRC/GData/GDataXMLNode.m; sourceTree = "<group>"; };
-		8E08353916DF20BC63A82848E2603466 /* MRDLNA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MRDLNA.modulemap; sourceTree = "<group>"; };
-		8F9509718CFCC3D81230AA7CF02478B7 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		91BA6F6CCD385509DC9FF3B1ACE3E309 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9235AEFD042C8D96AF4B4AA61E18C420 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98C93B05F9D85898FBBBE8043DFCE299 /* Pods-MRDLNA_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRDLNA_Tests-dummy.m"; sourceTree = "<group>"; };
-		9D04B5A0F87ABC4F3E56F5920B9C8B31 /* Device.xml */ = {isa = PBXFileReference; includeInIndex = 1; path = Device.xml; sourceTree = "<group>"; };
-		A150BFDFB60879728DB1958A240D4383 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		A290383A35668D087113EB21189A8115 /* Pods-MRDLNA_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A5ADA90E88F97BC0611F451A515137B8 /* CLUPnPServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPServer.h; sourceTree = "<group>"; };
-		A5E24AEEDA1549481629B4156B40DD17 /* Pods-MRDLNA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRDLNA_Example-umbrella.h"; sourceTree = "<group>"; };
-		AF8C213E138128F7803201DCD578F6D0 /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
-		AF9DBF5244746AF0A642C7E2185AE22A /* Pods-MRDLNA_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B6F37354BEC06814199BE587F6B0088C /* Pods_MRDLNA_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRDLNA_Example.framework; path = "Pods-MRDLNA_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B86F6FAEFDF53ED91583A8787327BFC2 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9074DAD0F76B1CE6BC56F6DAC6CD8B4 /* Pods-MRDLNA_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRDLNA_Tests-umbrella.h"; sourceTree = "<group>"; };
-		BABC89690D62E7FC91197B11E66961D3 /* Pods-MRDLNA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C1BB11CD0500B6B85F0AC0F38E854014 /* MRDLNA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRDLNA-dummy.m"; sourceTree = "<group>"; };
-		C4767F11DB68D2401218DD235E80EC3F /* MRDLNA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = MRDLNA.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C651D454CDF25A9A5C7E4FD29865AB52 /* CLUPnP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnP.h; sourceTree = "<group>"; };
-		C87637E6C327E2E889BC285A51EFF4C2 /* MRDLNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRDLNA.framework; path = MRDLNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC16E8B9087C97BB7D62126035251F6D /* GDataXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = MRDLNA/Classes/MRC/GData/GDataXMLNode.h; sourceTree = "<group>"; };
-		D82B81E88C7D98976B018DB4903B5D0C /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		DA2D7688850DF082E1FBFDDD69D6E5DE /* Pods-MRDLNA_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRDLNA_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E21EADA73A0E9BADB673270A4DFB8BA7 /* StopAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StopAction.m; sourceTree = "<group>"; };
-		E4BB907B4C41792AB5EC91961C4FCDF2 /* CLUPnPRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPRenderer.h; sourceTree = "<group>"; };
-		E6C5919021AC2DC8D29CC8C89A8E20F1 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
-		F0AA83B32C2F5E6466E5DA6F07B82185 /* CLUPnPDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPDevice.h; sourceTree = "<group>"; };
-		F0DF39FA6D613724B36227259BDE445C /* MRDLNA.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRDLNA.xcconfig; sourceTree = "<group>"; };
-		F18CCAEB371EC97E5B9FA432AB0D5F33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		F6DCF1CF6FEB7E2331885D61E809BE83 /* Pods-MRDLNA_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRDLNA_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F9E47CF40FEE47DA155D5859A8F3CF07 /* MRDLNA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRDLNA.m; path = MRDLNA/Classes/ARC/MRDLNA.m; sourceTree = "<group>"; };
-		FEC142CDDF9C7DB961E7EAEA3B1FA4F6 /* Pods-MRDLNA_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRDLNA_Tests.modulemap"; sourceTree = "<group>"; };
+		052BC92DE8C1D103B86942060A11255C /* MRDLNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRDLNA.debug.xcconfig; sourceTree = "<group>"; };
+		08F7E4DBF644D93164C7BA1F397CCEA3 /* MRDLNA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRDLNA-dummy.m"; sourceTree = "<group>"; };
+		0A920D887C57522E985151937EC3FC71 /* MRDLNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRDLNA.release.xcconfig; sourceTree = "<group>"; };
+		1067985BA63991E0B36D860CDA3A9934 /* Pods-MRDLNA_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		15D031E282A5CFCC3CF35A9CB78018FE /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
+		18B062B31EA8546EA95196B782858A57 /* Pods-MRDLNA_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRDLNA_Tests-dummy.m"; sourceTree = "<group>"; };
+		1A0D9F2F0EF8F919ADA9ED82E6B018BE /* Pods-MRDLNA_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Example-Info.plist"; sourceTree = "<group>"; };
+		1A5E8C88853C81FBBF40782F29BBBD11 /* CLUPnPAVPositionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPAVPositionInfo.m; sourceTree = "<group>"; };
+		1A7CF9F2D85AD6EB2D9F534DBEC491A7 /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
+		249EE1D705F384D15B4F687F964318A3 /* CLUPnPDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPDevice.m; sourceTree = "<group>"; };
+		24B88418120813D119918A466C58805E /* StopAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StopAction.m; sourceTree = "<group>"; };
+		2DAF5D1F4F7809FE9CDD144D3676A941 /* Pods-MRDLNA_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MRDLNA_Tests"; path = Pods_MRDLNA_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E82D8D103C77272B539E61C2E00AF45 /* Pods-MRDLNA_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRDLNA_Tests.modulemap"; sourceTree = "<group>"; };
+		3058ACD2E7EE3F4A004E752C7E70B68B /* CLUPnPResponseDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPResponseDelegate.h; sourceTree = "<group>"; };
+		308DD1ED2D8302C8D1DB1F41F47F794B /* Pods-MRDLNA_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		312DB2E47F704D19A24C794BE79F266C /* MRDLNA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRDLNA-umbrella.h"; sourceTree = "<group>"; };
+		38D37269EB29ED1530D297115FFE92E6 /* MRDLNA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MRDLNA.modulemap; sourceTree = "<group>"; };
+		3926BC160374235060F617DEE13D8DD2 /* MRDLNA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MRDLNA.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		41DEE8A2C9D85B1AE3111A98DABA3911 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		4276ECA0CE3BF5341F43C9F25CC74073 /* CLUPnP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnP.h; sourceTree = "<group>"; };
+		46543676111F76719BAF7A5EFD190342 /* GDataXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = MRDLNA/Classes/MRC/GData/GDataXMLNode.h; sourceTree = "<group>"; };
+		4E0F5117529674EABA368BE9F8CE45DE /* CLUPnPAVPositionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPAVPositionInfo.h; sourceTree = "<group>"; };
+		502C52532EAD5B6374F46680CBE24529 /* MRDLNA */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRDLNA; path = MRDLNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		517D13E58160E6AF4CC90189C711892E /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
+		5287796B63D5086CB873AA24D175EEA5 /* MRDLNA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRDLNA.m; path = MRDLNA/Classes/ARC/MRDLNA.m; sourceTree = "<group>"; };
+		5CE1E8858C6639EA2736554B50D9F3CC /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		61A56B81BD32839B1B3CDA350CB01145 /* SetUrl.xml */ = {isa = PBXFileReference; includeInIndex = 1; path = SetUrl.xml; sourceTree = "<group>"; };
+		67895FF9864B0DFF970DC863ED5080FC /* CLUPnPAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPAction.m; sourceTree = "<group>"; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72868FEB5AB26BB543416F0B4634D134 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		72DE28746C9E81B081154AFC4D6F4C0C /* Pods-MRDLNA_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRDLNA_Tests-Info.plist"; sourceTree = "<group>"; };
+		72F29FE7499B83FB5FD580208F4E0F8D /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
+		764986A6C4E22EA21D9D33BF7A306061 /* Pods-MRDLNA_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRDLNA_Example-umbrella.h"; sourceTree = "<group>"; };
+		78A9B6CEB7A4373DC0D4DCB1C9C5E465 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		7C8CF0C7B5C1762285B862D8BC8F5981 /* Pods-MRDLNA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7E9AF6213E5780A998F1B3D2496E5A9C /* Pods-MRDLNA_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MRDLNA_Example"; path = Pods_MRDLNA_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE45AB54C7014DD0EBA4D6A78CAAF7E /* CLUPnPRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPRenderer.m; sourceTree = "<group>"; };
+		8218A7C53ACAC44F68109737EA0E9E82 /* Pods-MRDLNA_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		83329881EF82CDE038FB2EBC01F8AD82 /* Pods-MRDLNA_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRDLNA_Example-frameworks.sh"; sourceTree = "<group>"; };
+		87D53D2468F4A76F969B555628969C00 /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
+		9374467D9662C558DC594371C21B1B16 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		99C56EF951CBFADA946BCB9EFAFF6BCD /* CLUPnPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLUPnPServer.m; sourceTree = "<group>"; };
+		9A72445F0AC28D1A986C765C6E5A485A /* MRDLNA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MRDLNA-Info.plist"; sourceTree = "<group>"; };
+		9D8B69370DCCEA0251BFE61B6D3408D0 /* Pods-MRDLNA_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD1102168A8F594CAD4473CE07775B4 /* GDataXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = MRDLNA/Classes/MRC/GData/GDataXMLNode.m; sourceTree = "<group>"; };
+		A3B27EE227F860B252A2A029A0C7CC0D /* Pods-MRDLNA_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRDLNA_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		A8180003DBBC123B159B6F870F6F0243 /* Pods-MRDLNA_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRDLNA_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B61712AB73AEFCE653B582A125DDC57E /* CLUPnPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPAction.h; sourceTree = "<group>"; };
+		B685AA3DE2F2BAF6F38BE59F57A160DE /* Pods-MRDLNA_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRDLNA_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C8710A4087DF748E081735FBBBC2E72B /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		D50A2C279EC8CF69CFE9A5B6299D5134 /* CLUPnPDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPDevice.h; sourceTree = "<group>"; };
+		D967D70D5F44AFD67C4BBEE7BA691756 /* StopAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StopAction.h; sourceTree = "<group>"; };
+		DCA2F280BBE43CE867EB51D76410E472 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		E0C8A88E9AB2D6CBEC19E6877713C586 /* Pods-MRDLNA_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRDLNA_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E4CB35B07FAFB76EA3E7AF7BA2ED7FE3 /* CLUPnPServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPServer.h; sourceTree = "<group>"; };
+		E6D0402D33BC6F2B9506C057D869444B /* MRDLNA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRDLNA.h; path = MRDLNA/Classes/ARC/MRDLNA.h; sourceTree = "<group>"; };
+		E6E37E8C70836EF9E38BF86A5BC5EAB4 /* Pods-MRDLNA_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRDLNA_Example-dummy.m"; sourceTree = "<group>"; };
+		ED211371797588F3B46AC865453E3CE1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F6B0EBDD60389EDDE7A1BF755A414C2B /* Pods-MRDLNA_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MRDLNA_Example.modulemap"; sourceTree = "<group>"; };
+		FBEBC8D6C943A3AB5EF8F4E9E697A6E9 /* Device.xml */ = {isa = PBXFileReference; includeInIndex = 1; path = Device.xml; sourceTree = "<group>"; };
+		FD7022ACFB2C7A5DB1BFFFE7FE04F062 /* MRDLNA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRDLNA-prefix.pch"; sourceTree = "<group>"; };
+		FF4F184421C328BA962A486C93CF4E90 /* CLUPnPRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLUPnPRenderer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		91B17177C482ABB5478995D0E7AE489A /* Frameworks */ = {
+		24478156FF4B50EA7E44C7711C0631BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8835E349C6C5861490952E27C029763F /* Foundation.framework in Frameworks */,
+				B058A71B2F1A38EDF01F7153BB9AFE79 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C220D7CF7EF7F4CF618D58A31957BAD /* Frameworks */ = {
+		3705A9CF1DCA7B80B201DC05BA600A8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCB982522605E72D5AB6BE32A888AA5D /* CocoaAsyncSocket.framework in Frameworks */,
-				7022DF8916EEDF308AF3FEB936CAFB4D /* Foundation.framework in Frameworks */,
+				AE1E10DD083236A0462A21FB4DE07BE4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1C2C126168B038B9B15BF2A4C96FDDC /* Frameworks */ = {
+		C8890B027821605EF90549A4D0293D93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01B2EBC1AB52980422F5A831BBCE3F4 /* CFNetwork.framework in Frameworks */,
-				2DAA98C8614A6DED26CE8712531AE1FC /* Foundation.framework in Frameworks */,
-				B688B80E8B12B7F6988B29DC592DA94D /* Security.framework in Frameworks */,
+				E7AD3D469A88AC4BFC7BEBFF17D5B5C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4EE33E2C25B9220E42A1C74B1F2BD65 /* Frameworks */ = {
+		D37DD023A3721BF2E9A52660FA8A3C6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF31AED7750809207C6DE07305E642FE /* Foundation.framework in Frameworks */,
+				33A88215D5655DDBF56DEAA41CC8D8DA /* CFNetwork.framework in Frameworks */,
+				26F87A3DC73299D66231DFE835E9C13D /* Foundation.framework in Frameworks */,
+				8861DA09219E12C0A1DBA07EB1CEB94A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1451C09EDA87A4DE7243A1C29DB0AA4C /* MRDLNA */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58BF326CCB6553A9F05B5F17100711C7 /* MRDLNA.h */,
-				F9E47CF40FEE47DA155D5859A8F3CF07 /* MRDLNA.m */,
-				184122B450989EBC2098F07CE6042775 /* DLNA */,
-				4667ECCBB7AD8761049986BCEB7E2A0E /* MRC */,
-				32E2A1E9B43B806A2D4E8D79A9B75995 /* Pod */,
-				33FA2C4E127B9F72C693B9729847990F /* Support Files */,
+				D5B250C191F0E4C7AD947CD0C88A0F4B /* iOS */,
 			);
-			name = MRDLNA;
-			path = ../..;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		184122B450989EBC2098F07CE6042775 /* DLNA */ = {
+		20FBA2814F5B8EB1A46334124B635D73 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C651D454CDF25A9A5C7E4FD29865AB52 /* CLUPnP.h */,
-				3856639BB69D41D227F0DDC75AAF4381 /* CLUPnPAction.h */,
-				6732A0099444F49858D371177ABE10C1 /* CLUPnPAction.m */,
-				5129D6F607DE39C61C93C80E91AF2010 /* CLUPnPAVPositionInfo.h */,
-				0A4284E0F9D9DFAAE4D41E8842277661 /* CLUPnPAVPositionInfo.m */,
-				F0AA83B32C2F5E6466E5DA6F07B82185 /* CLUPnPDevice.h */,
-				759BCA2D9DB6C88276944C63CFD41C6F /* CLUPnPDevice.m */,
-				E4BB907B4C41792AB5EC91961C4FCDF2 /* CLUPnPRenderer.h */,
-				7114F93CB5D6B11EF3FC7F80538DEE47 /* CLUPnPRenderer.m */,
-				71C11A8C05F4AB5182177B19E0757ACD /* CLUPnPResponseDelegate.h */,
-				A5ADA90E88F97BC0611F451A515137B8 /* CLUPnPServer.h */,
-				0C6AF641D75AEC9B4FB04FE57649E5FA /* CLUPnPServer.m */,
-				9D04B5A0F87ABC4F3E56F5920B9C8B31 /* Device.xml */,
-				891424E9E48DA0697E319EE9CF4C61B8 /* SetUrl.xml */,
-				26B90FA1BC4834B537F3E4483F17E62E /* StopAction.h */,
-				E21EADA73A0E9BADB673270A4DFB8BA7 /* StopAction.m */,
-			);
-			name = DLNA;
-			path = MRDLNA/Classes/ARC/DLNA;
-			sourceTree = "<group>";
-		};
-		26674C87A2F45A13552991EC359CB92E /* Pods-MRDLNA_Example */ = {
-			isa = PBXGroup;
-			children = (
-				4373653AEE854C2DE8457AFB71FEBA21 /* Info.plist */,
-				6FFECF7A4A06F08CEE27C19C2F947A99 /* Pods-MRDLNA_Example.modulemap */,
-				DA2D7688850DF082E1FBFDDD69D6E5DE /* Pods-MRDLNA_Example-acknowledgements.markdown */,
-				074FE5DF4908E3AC7D3454B97885B531 /* Pods-MRDLNA_Example-acknowledgements.plist */,
-				5CDFBA329422A01964122943F3E8FB32 /* Pods-MRDLNA_Example-dummy.m */,
-				AF9DBF5244746AF0A642C7E2185AE22A /* Pods-MRDLNA_Example-frameworks.sh */,
-				25EFBA4AA7D118FEBD70350C9DCE7DE0 /* Pods-MRDLNA_Example-resources.sh */,
-				A5E24AEEDA1549481629B4156B40DD17 /* Pods-MRDLNA_Example-umbrella.h */,
-				36F9C408468231B4146CDCAC1899DE98 /* Pods-MRDLNA_Example.debug.xcconfig */,
-				7C4B08132FFC61AAD8F6193D9A0E264B /* Pods-MRDLNA_Example.release.xcconfig */,
-			);
-			name = "Pods-MRDLNA_Example";
-			path = "Target Support Files/Pods-MRDLNA_Example";
-			sourceTree = "<group>";
-		};
-		26CB9A2D8D27D147FD819904308A69E2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B86F6FAEFDF53ED91583A8787327BFC2 /* CocoaAsyncSocket.framework */,
-				C87637E6C327E2E889BC285A51EFF4C2 /* MRDLNA.framework */,
-				B6F37354BEC06814199BE587F6B0088C /* Pods_MRDLNA_Example.framework */,
-				4E2257637EA4BC39571C57D70833292F /* Pods_MRDLNA_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2B933D4B764323E14C9F306E59BA9E9E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F18CCAEB371EC97E5B9FA432AB0D5F33 /* CFNetwork.framework */,
-				18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */,
-				5A7E85CD06FB5B7EAC4FAD953117F2D2 /* Security.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		302C3FD7C0787A96DC64CB657ADBE827 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1451C09EDA87A4DE7243A1C29DB0AA4C /* MRDLNA */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		32E2A1E9B43B806A2D4E8D79A9B75995 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8AC456B279E740FFCD4333EE36CDB209 /* LICENSE */,
-				C4767F11DB68D2401218DD235E80EC3F /* MRDLNA.podspec */,
-				696753A1D194D5120DB5BAB41EB62630 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		33FA2C4E127B9F72C693B9729847990F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2B7D50360D2407BF9D5B4F34C957A9E9 /* Info.plist */,
-				8E08353916DF20BC63A82848E2603466 /* MRDLNA.modulemap */,
-				F0DF39FA6D613724B36227259BDE445C /* MRDLNA.xcconfig */,
-				C1BB11CD0500B6B85F0AC0F38E854014 /* MRDLNA-dummy.m */,
-				28A334E6643D489A64B05AAFCF94D815 /* MRDLNA-prefix.pch */,
-				5A1B186189C1B1BB61AFC21E03640CD6 /* MRDLNA-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MRDLNA";
-			sourceTree = "<group>";
-		};
-		4506ACD9E9095D01E0F0D30C4573A58E /* Pods-MRDLNA_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				39F26C471C3CEAE522DF2802F333F52E /* Info.plist */,
-				FEC142CDDF9C7DB961E7EAEA3B1FA4F6 /* Pods-MRDLNA_Tests.modulemap */,
-				F6DCF1CF6FEB7E2331885D61E809BE83 /* Pods-MRDLNA_Tests-acknowledgements.markdown */,
-				82B7F47B04D489541A0F3E3E90142F99 /* Pods-MRDLNA_Tests-acknowledgements.plist */,
-				98C93B05F9D85898FBBBE8043DFCE299 /* Pods-MRDLNA_Tests-dummy.m */,
-				71F05162ECE572305CBFCB9E5C699016 /* Pods-MRDLNA_Tests-frameworks.sh */,
-				10CF757F2217D2A55924F8F013011EBE /* Pods-MRDLNA_Tests-resources.sh */,
-				B9074DAD0F76B1CE6BC56F6DAC6CD8B4 /* Pods-MRDLNA_Tests-umbrella.h */,
-				BABC89690D62E7FC91197B11E66961D3 /* Pods-MRDLNA_Tests.debug.xcconfig */,
-				A290383A35668D087113EB21189A8115 /* Pods-MRDLNA_Tests.release.xcconfig */,
-			);
-			name = "Pods-MRDLNA_Tests";
-			path = "Target Support Files/Pods-MRDLNA_Tests";
-			sourceTree = "<group>";
-		};
-		4667ECCBB7AD8761049986BCEB7E2A0E /* MRC */ = {
-			isa = PBXGroup;
-			children = (
-				CC16E8B9087C97BB7D62126035251F6D /* GDataXMLNode.h */,
-				8D61A3D1020407D7235F834CB4634E6B /* GDataXMLNode.m */,
-			);
-			name = MRC;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				302C3FD7C0787A96DC64CB657ADBE827 /* Development Pods */,
-				E57D8BB42B7367E2EA1AB4BAF61E5D44 /* Frameworks */,
-				991819176034B11A99ECC53C250D06AD /* Pods */,
-				26CB9A2D8D27D147FD819904308A69E2 /* Products */,
-				A44E946180BA8348924FE29BE2B7D190 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		97CDCB5A0A30A5875BD2674D78A4B922 /* CocoaAsyncSocket */ = {
-			isa = PBXGroup;
-			children = (
-				D82B81E88C7D98976B018DB4903B5D0C /* GCDAsyncSocket.h */,
-				8F9509718CFCC3D81230AA7CF02478B7 /* GCDAsyncSocket.m */,
-				30CCCF41576100268BFA48C3EED9517C /* GCDAsyncUdpSocket.h */,
-				9235AEFD042C8D96AF4B4AA61E18C420 /* GCDAsyncUdpSocket.m */,
-				ABF5ACA2D50E24517E38E82BF1F34D9B /* Support Files */,
-			);
-			name = CocoaAsyncSocket;
-			path = CocoaAsyncSocket;
-			sourceTree = "<group>";
-		};
-		991819176034B11A99ECC53C250D06AD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				97CDCB5A0A30A5875BD2674D78A4B922 /* CocoaAsyncSocket */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A44E946180BA8348924FE29BE2B7D190 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				26674C87A2F45A13552991EC359CB92E /* Pods-MRDLNA_Example */,
-				4506ACD9E9095D01E0F0D30C4573A58E /* Pods-MRDLNA_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		ABF5ACA2D50E24517E38E82BF1F34D9B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				330814B3C2DDA66B814375BBD80FEBE6 /* CocoaAsyncSocket.modulemap */,
-				0469EC467755C444DC684A90770240B4 /* CocoaAsyncSocket.xcconfig */,
-				A150BFDFB60879728DB1958A240D4383 /* CocoaAsyncSocket-dummy.m */,
-				E6C5919021AC2DC8D29CC8C89A8E20F1 /* CocoaAsyncSocket-prefix.pch */,
-				AF8C213E138128F7803201DCD578F6D0 /* CocoaAsyncSocket-umbrella.h */,
-				26446C934AC5390532FB7A431359FC7A /* Info.plist */,
+				15D031E282A5CFCC3CF35A9CB78018FE /* CocoaAsyncSocket.modulemap */,
+				DCA2F280BBE43CE867EB51D76410E472 /* CocoaAsyncSocket-dummy.m */,
+				517D13E58160E6AF4CC90189C711892E /* CocoaAsyncSocket-Info.plist */,
+				5CE1E8858C6639EA2736554B50D9F3CC /* CocoaAsyncSocket-prefix.pch */,
+				87D53D2468F4A76F969B555628969C00 /* CocoaAsyncSocket-umbrella.h */,
+				1A7CF9F2D85AD6EB2D9F534DBEC491A7 /* CocoaAsyncSocket.debug.xcconfig */,
+				72F29FE7499B83FB5FD580208F4E0F8D /* CocoaAsyncSocket.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CocoaAsyncSocket";
 			sourceTree = "<group>";
 		};
-		E57D8BB42B7367E2EA1AB4BAF61E5D44 /* Frameworks */ = {
+		215A203E78A2028D04F322C746727A10 /* MRC */ = {
 			isa = PBXGroup;
 			children = (
-				91BA6F6CCD385509DC9FF3B1ACE3E309 /* CocoaAsyncSocket.framework */,
-				2B933D4B764323E14C9F306E59BA9E9E /* iOS */,
+				46543676111F76719BAF7A5EFD190342 /* GDataXMLNode.h */,
+				9DD1102168A8F594CAD4473CE07775B4 /* GDataXMLNode.m */,
 			);
-			name = Frameworks;
+			name = MRC;
+			sourceTree = "<group>";
+		};
+		3F9DB7414820E1B7834A9825AE4CF039 /* DLNA */ = {
+			isa = PBXGroup;
+			children = (
+				4276ECA0CE3BF5341F43C9F25CC74073 /* CLUPnP.h */,
+				B61712AB73AEFCE653B582A125DDC57E /* CLUPnPAction.h */,
+				67895FF9864B0DFF970DC863ED5080FC /* CLUPnPAction.m */,
+				4E0F5117529674EABA368BE9F8CE45DE /* CLUPnPAVPositionInfo.h */,
+				1A5E8C88853C81FBBF40782F29BBBD11 /* CLUPnPAVPositionInfo.m */,
+				D50A2C279EC8CF69CFE9A5B6299D5134 /* CLUPnPDevice.h */,
+				249EE1D705F384D15B4F687F964318A3 /* CLUPnPDevice.m */,
+				FF4F184421C328BA962A486C93CF4E90 /* CLUPnPRenderer.h */,
+				7EE45AB54C7014DD0EBA4D6A78CAAF7E /* CLUPnPRenderer.m */,
+				3058ACD2E7EE3F4A004E752C7E70B68B /* CLUPnPResponseDelegate.h */,
+				E4CB35B07FAFB76EA3E7AF7BA2ED7FE3 /* CLUPnPServer.h */,
+				99C56EF951CBFADA946BCB9EFAFF6BCD /* CLUPnPServer.m */,
+				FBEBC8D6C943A3AB5EF8F4E9E697A6E9 /* Device.xml */,
+				61A56B81BD32839B1B3CDA350CB01145 /* SetUrl.xml */,
+				D967D70D5F44AFD67C4BBEE7BA691756 /* StopAction.h */,
+				24B88418120813D119918A466C58805E /* StopAction.m */,
+			);
+			name = DLNA;
+			path = MRDLNA/Classes/ARC/DLNA;
+			sourceTree = "<group>";
+		};
+		589E85DA6D2A984577F9741283ED0FEB /* Pods-MRDLNA_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F6B0EBDD60389EDDE7A1BF755A414C2B /* Pods-MRDLNA_Example.modulemap */,
+				E0C8A88E9AB2D6CBEC19E6877713C586 /* Pods-MRDLNA_Example-acknowledgements.markdown */,
+				308DD1ED2D8302C8D1DB1F41F47F794B /* Pods-MRDLNA_Example-acknowledgements.plist */,
+				E6E37E8C70836EF9E38BF86A5BC5EAB4 /* Pods-MRDLNA_Example-dummy.m */,
+				83329881EF82CDE038FB2EBC01F8AD82 /* Pods-MRDLNA_Example-frameworks.sh */,
+				1A0D9F2F0EF8F919ADA9ED82E6B018BE /* Pods-MRDLNA_Example-Info.plist */,
+				764986A6C4E22EA21D9D33BF7A306061 /* Pods-MRDLNA_Example-umbrella.h */,
+				A8180003DBBC123B159B6F870F6F0243 /* Pods-MRDLNA_Example.debug.xcconfig */,
+				7C8CF0C7B5C1762285B862D8BC8F5981 /* Pods-MRDLNA_Example.release.xcconfig */,
+			);
+			name = "Pods-MRDLNA_Example";
+			path = "Target Support Files/Pods-MRDLNA_Example";
+			sourceTree = "<group>";
+		};
+		9C69C7FAB67FC190180B85DAB8496632 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				589E85DA6D2A984577F9741283ED0FEB /* Pods-MRDLNA_Example */,
+				E144518ECD49524594F8582CC9CDFEBF /* Pods-MRDLNA_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BB2BDAA8DB999C491DAC5EAE1CFDC78F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F26488BF13288A9B8CB091FA9570EC0F /* CocoaAsyncSocket */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEA5D44E7223F5A13AFA2F4859A477FA /* MRDLNA */ = {
+			isa = PBXGroup;
+			children = (
+				E6D0402D33BC6F2B9506C057D869444B /* MRDLNA.h */,
+				5287796B63D5086CB873AA24D175EEA5 /* MRDLNA.m */,
+				3F9DB7414820E1B7834A9825AE4CF039 /* DLNA */,
+				215A203E78A2028D04F322C746727A10 /* MRC */,
+				E1DAEA813E0F26DC892E11C8CA51DC78 /* Pod */,
+				D9EC92EB6B4144EF2D9E57012A411887 /* Support Files */,
+			);
+			name = MRDLNA;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E492991C8A93F878DAF012E097EB9D7A /* Development Pods */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				BB2BDAA8DB999C491DAC5EAE1CFDC78F /* Pods */,
+				FCA43C5A6F7F1A7062B5D773BE601CC4 /* Products */,
+				9C69C7FAB67FC190180B85DAB8496632 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D5B250C191F0E4C7AD947CD0C88A0F4B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */,
+				7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */,
+				7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D9EC92EB6B4144EF2D9E57012A411887 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38D37269EB29ED1530D297115FFE92E6 /* MRDLNA.modulemap */,
+				08F7E4DBF644D93164C7BA1F397CCEA3 /* MRDLNA-dummy.m */,
+				9A72445F0AC28D1A986C765C6E5A485A /* MRDLNA-Info.plist */,
+				FD7022ACFB2C7A5DB1BFFFE7FE04F062 /* MRDLNA-prefix.pch */,
+				312DB2E47F704D19A24C794BE79F266C /* MRDLNA-umbrella.h */,
+				052BC92DE8C1D103B86942060A11255C /* MRDLNA.debug.xcconfig */,
+				0A920D887C57522E985151937EC3FC71 /* MRDLNA.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MRDLNA";
+			sourceTree = "<group>";
+		};
+		E144518ECD49524594F8582CC9CDFEBF /* Pods-MRDLNA_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2E82D8D103C77272B539E61C2E00AF45 /* Pods-MRDLNA_Tests.modulemap */,
+				B685AA3DE2F2BAF6F38BE59F57A160DE /* Pods-MRDLNA_Tests-acknowledgements.markdown */,
+				1067985BA63991E0B36D860CDA3A9934 /* Pods-MRDLNA_Tests-acknowledgements.plist */,
+				18B062B31EA8546EA95196B782858A57 /* Pods-MRDLNA_Tests-dummy.m */,
+				72DE28746C9E81B081154AFC4D6F4C0C /* Pods-MRDLNA_Tests-Info.plist */,
+				A3B27EE227F860B252A2A029A0C7CC0D /* Pods-MRDLNA_Tests-umbrella.h */,
+				8218A7C53ACAC44F68109737EA0E9E82 /* Pods-MRDLNA_Tests.debug.xcconfig */,
+				9D8B69370DCCEA0251BFE61B6D3408D0 /* Pods-MRDLNA_Tests.release.xcconfig */,
+			);
+			name = "Pods-MRDLNA_Tests";
+			path = "Target Support Files/Pods-MRDLNA_Tests";
+			sourceTree = "<group>";
+		};
+		E1DAEA813E0F26DC892E11C8CA51DC78 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				72868FEB5AB26BB543416F0B4634D134 /* LICENSE */,
+				3926BC160374235060F617DEE13D8DD2 /* MRDLNA.podspec */,
+				ED211371797588F3B46AC865453E3CE1 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		E492991C8A93F878DAF012E097EB9D7A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEA5D44E7223F5A13AFA2F4859A477FA /* MRDLNA */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F26488BF13288A9B8CB091FA9570EC0F /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				9374467D9662C558DC594371C21B1B16 /* GCDAsyncSocket.h */,
+				41DEE8A2C9D85B1AE3111A98DABA3911 /* GCDAsyncSocket.m */,
+				C8710A4087DF748E081735FBBBC2E72B /* GCDAsyncUdpSocket.h */,
+				78A9B6CEB7A4373DC0D4DCB1C9C5E465 /* GCDAsyncUdpSocket.m */,
+				20FBA2814F5B8EB1A46334124B635D73 /* Support Files */,
+			);
+			name = CocoaAsyncSocket;
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		FCA43C5A6F7F1A7062B5D773BE601CC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */,
+				502C52532EAD5B6374F46680CBE24529 /* MRDLNA */,
+				7E9AF6213E5780A998F1B3D2496E5A9C /* Pods-MRDLNA_Example */,
+				2DAF5D1F4F7809FE9CDD144D3676A941 /* Pods-MRDLNA_Tests */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		066131069354C4CC132CAB645145E8F7 /* Headers */ = {
+		17317FE99BCBCAE1DCC6BF783E1EFAF0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4230DB0D114C94B081018C1AC1E9972 /* CocoaAsyncSocket-umbrella.h in Headers */,
-				A882891E5A89CADF96C2CA79606409CA /* GCDAsyncSocket.h in Headers */,
-				AC7DC2A21843CD99040DCD79FF3BE91B /* GCDAsyncUdpSocket.h in Headers */,
+				7C1DD31A3A7A0FBBA1A9C88A92CAA28C /* CocoaAsyncSocket-umbrella.h in Headers */,
+				67A4DC4B4DB5321811BC3D3627AE855E /* GCDAsyncSocket.h in Headers */,
+				B19D3C79B36157522E7662E737D558EF /* GCDAsyncUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44EC3A71233AD02B73747B855C3A8630 /* Headers */ = {
+		3D7EE81F75244C199818748D5C96658C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D1DD695BA8A8CE20F22C16882700DA8 /* Pods-MRDLNA_Tests-umbrella.h in Headers */,
+				CBE5E2E4477D0D33CDF989AC51894582 /* Pods-MRDLNA_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E442544B8FB2E9B4E045FAAAEC4FBBF /* Headers */ = {
+		746EB510743203E2A808CDB67F494A68 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5F5D6E03B396AF85AFDD0DA58135D9 /* CLUPnP.h in Headers */,
-				D2E17B4C8457DA9E10CE30F028ABEA34 /* CLUPnPAction.h in Headers */,
-				89F66F446DA7B8079C1EB93A9A9F00CB /* CLUPnPAVPositionInfo.h in Headers */,
-				77FA9968BE150F66BBCF8FC9777E9BD3 /* CLUPnPDevice.h in Headers */,
-				2CAD733C2968680FD0824C52C299D26D /* CLUPnPRenderer.h in Headers */,
-				13F5355AE4B791722FE9D0D6F7190CAB /* CLUPnPResponseDelegate.h in Headers */,
-				F9963519CC6256EAFCA153D36DFD2D10 /* CLUPnPServer.h in Headers */,
-				B404DD3D44E99DCDE15342F348FC3690 /* GDataXMLNode.h in Headers */,
-				8830E25ECC6B6BA7562AA07296B9265E /* MRDLNA-umbrella.h in Headers */,
-				175278A856242A4C4ED83BBE79F852F6 /* MRDLNA.h in Headers */,
-				C6ADCCC41C33152B178F3A693009BCCD /* StopAction.h in Headers */,
+				4DFA68793C451440B7C0E05E02BDFB3B /* CLUPnP.h in Headers */,
+				414DA16755C3B48053361609B780665E /* CLUPnPAction.h in Headers */,
+				20B76E5452BEC1513432FA8254651C43 /* CLUPnPAVPositionInfo.h in Headers */,
+				35BF44C21A5D253DA86B718E2383F752 /* CLUPnPDevice.h in Headers */,
+				76726391061B01393FCAA24326EC0DBF /* CLUPnPRenderer.h in Headers */,
+				435A825F00C4E0FDF2B5471124F1D3E6 /* CLUPnPResponseDelegate.h in Headers */,
+				894C208C5A0D84DCE66BE68D7CEB546E /* CLUPnPServer.h in Headers */,
+				6BFD316D612711201623EC7372E84051 /* GDataXMLNode.h in Headers */,
+				66D475865216567868C070E412FEB939 /* MRDLNA.h in Headers */,
+				23A0A54438EF16261BDF092EAF9DB5A7 /* MRDLNA-umbrella.h in Headers */,
+				47B08F146531867C1AC50104F643C9F3 /* StopAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EF4CD4B522C68B43146E03E6BE14AEE /* Headers */ = {
+		E2B10BAB2286478A2A5A32230084336E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F2504B015906435B8E7A619DC3C7E9 /* Pods-MRDLNA_Example-umbrella.h in Headers */,
+				EDAA03B6B5C664D3AE15F5EB1E20CAB9 /* Pods-MRDLNA_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4210AEC0F80D8530761D8C40F26415AD /* MRDLNA */ = {
+		3D133736615D25181CFFC407B5895BD4 /* MRDLNA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A03D9E42BA772E4E83C00C7399B05050 /* Build configuration list for PBXNativeTarget "MRDLNA" */;
+			buildConfigurationList = 7E2CEF7A5E08237D66544E96C3285602 /* Build configuration list for PBXNativeTarget "MRDLNA" */;
 			buildPhases = (
-				EAF0554FA939F3E05B3D32A84ACC3664 /* Sources */,
-				9C220D7CF7EF7F4CF618D58A31957BAD /* Frameworks */,
-				4E442544B8FB2E9B4E045FAAAEC4FBBF /* Headers */,
+				746EB510743203E2A808CDB67F494A68 /* Headers */,
+				D024A28C874DD8D5A5FF794B8F4FABCB /* Sources */,
+				C8890B027821605EF90549A4D0293D93 /* Frameworks */,
+				C495673797EC52B69A8CC904307F018D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BF75AFD64FABC0EA138C37D95E8DEC41 /* PBXTargetDependency */,
+				00B59CECD3E3E17258CDFC2EFAFB827A /* PBXTargetDependency */,
 			);
 			name = MRDLNA;
 			productName = MRDLNA;
-			productReference = C87637E6C327E2E889BC285A51EFF4C2 /* MRDLNA.framework */;
+			productReference = 502C52532EAD5B6374F46680CBE24529 /* MRDLNA */;
 			productType = "com.apple.product-type.framework";
 		};
-		642730CDE1AFA5005A1EF21CA2101891 /* Pods-MRDLNA_Tests */ = {
+		52BDCC01F7A92F369AF2EA20D6D5AA10 /* Pods-MRDLNA_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56262765F3D0B681794F2778A8F13167 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Tests" */;
+			buildConfigurationList = 63F4AC87BDA65EB1D7FF8B966F7A3437 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Tests" */;
 			buildPhases = (
-				BF5C5D2832D23C3FD999FE45141CEC1F /* Sources */,
-				D4EE33E2C25B9220E42A1C74B1F2BD65 /* Frameworks */,
-				44EC3A71233AD02B73747B855C3A8630 /* Headers */,
+				3D7EE81F75244C199818748D5C96658C /* Headers */,
+				74A8C9E7784C920916C61ED7F6FD90CC /* Sources */,
+				3705A9CF1DCA7B80B201DC05BA600A8E /* Frameworks */,
+				DDDB4E6A0E46E00AE090F91675DF30EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				050180CCA989422B7CC80859B40C25FA /* PBXTargetDependency */,
 			);
 			name = "Pods-MRDLNA_Tests";
-			productName = "Pods-MRDLNA_Tests";
-			productReference = 4E2257637EA4BC39571C57D70833292F /* Pods_MRDLNA_Tests.framework */;
+			productName = Pods_MRDLNA_Tests;
+			productReference = 2DAF5D1F4F7809FE9CDD144D3676A941 /* Pods-MRDLNA_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
-		94C7B3F405A3A7D3F563044A0484FCCF /* Pods-MRDLNA_Example */ = {
+		6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BD652FEE458D2130C3D5DB4482892C5 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Example" */;
+			buildConfigurationList = B0A95C19FCB7B5FAAC46BE001C359756 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
 			buildPhases = (
-				01A8F0E159320116AA2E23A53D634428 /* Sources */,
-				91B17177C482ABB5478995D0E7AE489A /* Frameworks */,
-				7EF4CD4B522C68B43146E03E6BE14AEE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A4F6DDA0C605652ACB813906A0730B3B /* PBXTargetDependency */,
-				188B091B31ACEF831F7E374B66ABC61B /* PBXTargetDependency */,
-			);
-			name = "Pods-MRDLNA_Example";
-			productName = "Pods-MRDLNA_Example";
-			productReference = B6F37354BEC06814199BE587F6B0088C /* Pods_MRDLNA_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F2A03B912F777B2BFB05E7B9E903B15F /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
-			buildPhases = (
-				FD452A203117FF8DFA26B0711D439093 /* Sources */,
-				D1C2C126168B038B9B15BF2A4C96FDDC /* Frameworks */,
-				066131069354C4CC132CAB645145E8F7 /* Headers */,
+				17317FE99BCBCAE1DCC6BF783E1EFAF0 /* Headers */,
+				D16C692EA2A4A203DC5FD33344704672 /* Sources */,
+				D37DD023A3721BF2E9A52660FA8A3C6D /* Frameworks */,
+				3D473FD104BFCD98C99B267430355524 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -501,112 +487,173 @@
 			);
 			name = CocoaAsyncSocket;
 			productName = CocoaAsyncSocket;
-			productReference = B86F6FAEFDF53ED91583A8787327BFC2 /* CocoaAsyncSocket.framework */;
+			productReference = 6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CA641B3FFF861FF43DFAD734C9BC18C /* Pods-MRDLNA_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44386D746A1FEBA8DB2E58417792CAD2 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Example" */;
+			buildPhases = (
+				E2B10BAB2286478A2A5A32230084336E /* Headers */,
+				FC7A7EDDC9BFC2415C70CFAB3BD80C6F /* Sources */,
+				24478156FF4B50EA7E44C7711C0631BB /* Frameworks */,
+				53DFC2B26ECF1AC804AC31AA58B0AD04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D14B8B0461E331B537740A16862EBD29 /* PBXTargetDependency */,
+				F642A7DCD6E1D132698C1164C910BEBF /* PBXTargetDependency */,
+			);
+			name = "Pods-MRDLNA_Example";
+			productName = Pods_MRDLNA_Example;
+			productReference = 7E9AF6213E5780A998F1B3D2496E5A9C /* Pods-MRDLNA_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 26CB9A2D8D27D147FD819904308A69E2 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			productRefGroup = FCA43C5A6F7F1A7062B5D773BE601CC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */,
-				4210AEC0F80D8530761D8C40F26415AD /* MRDLNA */,
-				94C7B3F405A3A7D3F563044A0484FCCF /* Pods-MRDLNA_Example */,
-				642730CDE1AFA5005A1EF21CA2101891 /* Pods-MRDLNA_Tests */,
+				6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */,
+				3D133736615D25181CFFC407B5895BD4 /* MRDLNA */,
+				6CA641B3FFF861FF43DFAD734C9BC18C /* Pods-MRDLNA_Example */,
+				52BDCC01F7A92F369AF2EA20D6D5AA10 /* Pods-MRDLNA_Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3D473FD104BFCD98C99B267430355524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DFC2B26ECF1AC804AC31AA58B0AD04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C495673797EC52B69A8CC904307F018D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDB4E6A0E46E00AE090F91675DF30EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		01A8F0E159320116AA2E23A53D634428 /* Sources */ = {
+		74A8C9E7784C920916C61ED7F6FD90CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E9DA799517A1324837F1C4AE2BC3AC /* Pods-MRDLNA_Example-dummy.m in Sources */,
+				118F5CDD7173B308B8EAA90C7FE423CC /* Pods-MRDLNA_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF5C5D2832D23C3FD999FE45141CEC1F /* Sources */ = {
+		D024A28C874DD8D5A5FF794B8F4FABCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C029726BEBA6E99FD66BBE340BA49B /* Pods-MRDLNA_Tests-dummy.m in Sources */,
+				666B0EBF8E0A814C7282DF4AEBC4364D /* CLUPnPAction.m in Sources */,
+				6FBBBA44942624EB9962985F1D5B6E1B /* CLUPnPAVPositionInfo.m in Sources */,
+				B8F629D400B89D705FE876EEF1F31689 /* CLUPnPDevice.m in Sources */,
+				9813A8FAFB4A425C0ABA6704F30C5FCA /* CLUPnPRenderer.m in Sources */,
+				7C99B75EB476B15715CE8ACBE246F421 /* CLUPnPServer.m in Sources */,
+				B68CC7C5F59BFBCC623FC14F49293F91 /* Device.xml in Sources */,
+				A1D18D147BFB3AC869A50A18426F67C2 /* GDataXMLNode.m in Sources */,
+				1F6AB16147E2AEEAB8776F03A62D1B9B /* MRDLNA.m in Sources */,
+				7150127FF831BBBF227B57F873608405 /* MRDLNA-dummy.m in Sources */,
+				0B9ABB97AED266EA6551AFAB0E0C699C /* SetUrl.xml in Sources */,
+				E7FD421F839A72F3EAFE88A467B135E9 /* StopAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAF0554FA939F3E05B3D32A84ACC3664 /* Sources */ = {
+		D16C692EA2A4A203DC5FD33344704672 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930694138A14539AD42F26A324B3E19F /* CLUPnPAction.m in Sources */,
-				69E23705E7F2F76D89CD3F43FC43E98F /* CLUPnPAVPositionInfo.m in Sources */,
-				876A93E76F674EB6A3EC710F04CC9F33 /* CLUPnPDevice.m in Sources */,
-				73533AA3DA69AEAB0757523E610A6C24 /* CLUPnPRenderer.m in Sources */,
-				7A2A231BF626077D067B151938E92644 /* CLUPnPServer.m in Sources */,
-				306AFB593794C109ECC8D859E0973A0C /* Device.xml in Sources */,
-				948E818D9E104EFEADD7B3948CC3B3DE /* GDataXMLNode.m in Sources */,
-				CCCEB35695D2CC9E78DA4754D76A02DD /* MRDLNA-dummy.m in Sources */,
-				E4E821E53E3159FFD19C1896B9A835EE /* MRDLNA.m in Sources */,
-				5B9A8ECDCF25E76EEC435AD20A8FA563 /* SetUrl.xml in Sources */,
-				5FA04447BEE04565C124E44FC055F41C /* StopAction.m in Sources */,
+				CBAA830E4F43D7A6DBBDE378713ADDD0 /* CocoaAsyncSocket-dummy.m in Sources */,
+				C577175BC7C3EA73248A5CB041587053 /* GCDAsyncSocket.m in Sources */,
+				C2DFA93DF25F018AA81E9D441E1CAF26 /* GCDAsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD452A203117FF8DFA26B0711D439093 /* Sources */ = {
+		FC7A7EDDC9BFC2415C70CFAB3BD80C6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E4F0161B4D135DA3A0763619A56C2F5 /* CocoaAsyncSocket-dummy.m in Sources */,
-				8480493AEC1C7AF1B5C0E0BF2F70FB44 /* GCDAsyncSocket.m in Sources */,
-				AEE9644DA0EFCF945438E125BA4F0724 /* GCDAsyncUdpSocket.m in Sources */,
+				0E21646F1AD97CAB727EB9CCBD3C73DC /* Pods-MRDLNA_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		188B091B31ACEF831F7E374B66ABC61B /* PBXTargetDependency */ = {
+		00B59CECD3E3E17258CDFC2EFAFB827A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 785505CF5FFC463D614C7D22400ADEE3 /* PBXContainerItemProxy */;
+		};
+		050180CCA989422B7CC80859B40C25FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MRDLNA_Example";
+			target = 6CA641B3FFF861FF43DFAD734C9BC18C /* Pods-MRDLNA_Example */;
+			targetProxy = F74582CEFEEE37A2AC75976E062C26A5 /* PBXContainerItemProxy */;
+		};
+		D14B8B0461E331B537740A16862EBD29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 5F72030849CDF36B821DF04AEEDCCD86 /* PBXContainerItemProxy */;
+		};
+		F642A7DCD6E1D132698C1164C910BEBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MRDLNA;
-			target = 4210AEC0F80D8530761D8C40F26415AD /* MRDLNA */;
-			targetProxy = F4646E04A07B0E6EFCBD1E508C33FB34 /* PBXContainerItemProxy */;
-		};
-		A4F6DDA0C605652ACB813906A0730B3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */;
-			targetProxy = 6B9D1DEDD45848D600287540E4009E69 /* PBXContainerItemProxy */;
-		};
-		BF75AFD64FABC0EA138C37D95E8DEC41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */;
-			targetProxy = CAE02F97838F426A887F57302DDFE56F /* PBXContainerItemProxy */;
+			target = 3D133736615D25181CFFC407B5895BD4 /* MRDLNA */;
+			targetProxy = 6376091D40F56236751AC77C8394A5F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BDBD2592939F75F3A5801F28ABCB989 /* Debug */ = {
+		0B67FB0EFCCCCCD2AAB0E9C7A0A68A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BABC89690D62E7FC91197B11E66961D3 /* Pods-MRDLNA_Tests.debug.xcconfig */;
+			baseConfigurationReference = 8218A7C53ACAC44F68109737EA0E9E82 /* Pods-MRDLNA_Tests.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -615,9 +662,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.modulemap";
@@ -625,7 +672,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MRDLNA_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,70 +681,11 @@
 			};
 			name = Debug;
 		};
-		0CD76014622D25F348AC24F3E271E931 /* Release */ = {
+		0F8F2DDD18E519B4D2A0B74BC1E3755D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0469EC467755C444DC684A90770240B4 /* CocoaAsyncSocket.xcconfig */;
+			baseConfigurationReference = 052BC92DE8C1D103B86942060A11255C /* MRDLNA.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_NAME = CocoaAsyncSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3E916940FD308920A298824C18BD8B17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0469EC467755C444DC684A90770240B4 /* CocoaAsyncSocket.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_NAME = CocoaAsyncSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4EE065D5ACB17AAB794F91DD5D0BB265 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0DF39FA6D613724B36227259BDE445C /* MRDLNA.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -707,59 +695,27 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/MRDLNA/MRDLNA-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MRDLNA/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/MRDLNA/MRDLNA-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MRDLNA/MRDLNA.modulemap";
+				PRODUCT_MODULE_NAME = MRDLNA;
 				PRODUCT_NAME = MRDLNA;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		71A060C6AAB67FBFEAFE3A4F86E77509 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36F9C408468231B4146CDCAC1899DE98 /* Pods-MRDLNA_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MRDLNA_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B5D5A5B628FC03C4732D3A5DD0D7573B /* Release */ = {
+		33BB441CF8D080F2AAC90B9F7F316A3A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C4B08132FFC61AAD8F6193D9A0E264B /* Pods-MRDLNA_Example.release.xcconfig */;
+			baseConfigurationReference = 1A7CF9F2D85AD6EB2D9F534DBEC491A7 /* CocoaAsyncSocket.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -768,17 +724,49 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		73A82F7AFFC734F899D17716564D09AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D8B69370DCCEA0251BFE61B6D3408D0 /* Pods-MRDLNA_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MRDLNA_Example;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -788,10 +776,11 @@
 			};
 			name = Release;
 		};
-		C3E37FB098AE76440E29106ADBF00CEB /* Debug */ = {
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -814,13 +803,140 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		ACBF25B9DE77F3897B20D9BEB437A584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8180003DBBC123B159B6F870F6F0243 /* Pods-MRDLNA_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B46F2EC6A02AFC82490510D7AD675CAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A920D887C57522E985151937EC3FC71 /* MRDLNA.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRDLNA/MRDLNA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRDLNA/MRDLNA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRDLNA/MRDLNA.modulemap";
+				PRODUCT_MODULE_NAME = MRDLNA;
+				PRODUCT_NAME = MRDLNA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -840,22 +956,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		C4438E14C676139FB751B7C9EF05B76F /* Release */ = {
+		B9FD9DB8CC8D687D3E487071BF58D24B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A290383A35668D087113EB21189A8115 /* Pods-MRDLNA_Tests.release.xcconfig */;
+			baseConfigurationReference = 72F29FE7499B83FB5FD580208F4E0F8D /* CocoaAsyncSocket.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -864,17 +982,50 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Tests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D5B29403276D16E774FB536641ADCE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C8CF0C7B5C1762285B862D8BC8F5981 /* Pods-MRDLNA_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MRDLNA_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -884,142 +1035,55 @@
 			};
 			name = Release;
 		};
-		C6DB52C8E42E9D3800F31C54B96A966E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0DF39FA6D613724B36227259BDE445C /* MRDLNA.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MRDLNA/MRDLNA-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MRDLNA/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MRDLNA/MRDLNA.modulemap";
-				PRODUCT_NAME = MRDLNA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DA03565BE765DB55C6448FB363A44481 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		44386D746A1FEBA8DB2E58417792CAD2 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C3E37FB098AE76440E29106ADBF00CEB /* Debug */,
-				DA03565BE765DB55C6448FB363A44481 /* Release */,
+				ACBF25B9DE77F3897B20D9BEB437A584 /* Debug */,
+				D5B29403276D16E774FB536641ADCE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BD652FEE458D2130C3D5DB4482892C5 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Example" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71A060C6AAB67FBFEAFE3A4F86E77509 /* Debug */,
-				B5D5A5B628FC03C4732D3A5DD0D7573B /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56262765F3D0B681794F2778A8F13167 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Tests" */ = {
+		63F4AC87BDA65EB1D7FF8B966F7A3437 /* Build configuration list for PBXNativeTarget "Pods-MRDLNA_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0BDBD2592939F75F3A5801F28ABCB989 /* Debug */,
-				C4438E14C676139FB751B7C9EF05B76F /* Release */,
+				0B67FB0EFCCCCCD2AAB0E9C7A0A68A03 /* Debug */,
+				73A82F7AFFC734F899D17716564D09AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A03D9E42BA772E4E83C00C7399B05050 /* Build configuration list for PBXNativeTarget "MRDLNA" */ = {
+		7E2CEF7A5E08237D66544E96C3285602 /* Build configuration list for PBXNativeTarget "MRDLNA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6DB52C8E42E9D3800F31C54B96A966E /* Debug */,
-				4EE065D5ACB17AAB794F91DD5D0BB265 /* Release */,
+				0F8F2DDD18E519B4D2A0B74BC1E3755D /* Debug */,
+				B46F2EC6A02AFC82490510D7AD675CAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2A03B912F777B2BFB05E7B9E903B15F /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+		B0A95C19FCB7B5FAAC46BE001C359756 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E916940FD308920A298824C18BD8B17 /* Debug */,
-				0CD76014622D25F348AC24F3E271E931 /* Release */,
+				33BB441CF8D080F2AAC90B9F7F316A3A /* Debug */,
+				B9FD9DB8CC8D687D3E487071BF58D24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

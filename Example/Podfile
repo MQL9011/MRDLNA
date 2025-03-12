@@ -1,5 +1,5 @@
 use_frameworks!
-platform :ios, '8.0'
+platform :ios, '11.0'
 
 target 'MRDLNA_Example' do
   pod 'MRDLNA', :path => '../'
@@ -10,3 +10,14 @@ target 'MRDLNA_Example' do
     
   end
 end
+
+post_install do |installer|
+# 解决xcode 15 报错 xcode SDK does not contain ‘libarclite‘
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+  end
+end
+
+
