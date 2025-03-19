@@ -7,22 +7,21 @@
 //
 
 #import "CLUPnPAVPositionInfo.h"
-#import "GDataXMLNode.h"
+#import "CLXMLParser.h"
 
 @implementation CLUPnPAVPositionInfo
 
-- (void)setArray:(NSArray *)array{
+- (void)setArray:(NSArray *)array {
     @autoreleasepool {
-        for (int m = 0; m < array.count; m++) {
-            GDataXMLElement *needEle = [array objectAtIndex:m];
-            if ([needEle.name isEqualToString:@"TrackDuration"]) {
-                self.trackDuration = [[needEle stringValue] durationTime];
+        for (NSDictionary *dict in array) {
+            if ([dict[@"TrackDuration"] isKindOfClass:[NSString class]]) {
+                self.trackDuration = [dict[@"TrackDuration"] durationTime];
             }
-            if ([needEle.name isEqualToString:@"RelTime"]) {
-                self.relTime = [[needEle stringValue] durationTime];
+            if ([dict[@"RelTime"] isKindOfClass:[NSString class]]) {
+                self.relTime = [dict[@"RelTime"] durationTime];
             }
-            if ([needEle.name isEqualToString:@"AbsTime"]) {
-                self.absTime = [[needEle stringValue] durationTime];
+            if ([dict[@"AbsTime"] isKindOfClass:[NSString class]]) {
+                self.absTime = [dict[@"AbsTime"] durationTime];
             }
         }
     }
@@ -32,18 +31,17 @@
 
 @implementation CLUPnPTransportInfo
 
-- (void)setArray:(NSArray *)array{
+- (void)setArray:(NSArray *)array {
     @autoreleasepool {        
-        for (int m = 0; m < array.count; m++) {
-            GDataXMLElement *needEle = [array objectAtIndex:m];
-            if ([needEle.name isEqualToString:@"CurrentTransportState"]) {
-                self.currentTransportState = [needEle stringValue];
+        for (NSDictionary *dict in array) {
+            if ([dict[@"CurrentTransportState"] isKindOfClass:[NSString class]]) {
+                self.currentTransportState = dict[@"CurrentTransportState"];
             }
-            if ([needEle.name isEqualToString:@"CurrentTransportStatus"]) {
-                self.currentTransportStatus = [needEle stringValue];
+            if ([dict[@"CurrentTransportStatus"] isKindOfClass:[NSString class]]) {
+                self.currentTransportStatus = dict[@"CurrentTransportStatus"];
             }
-            if ([needEle.name isEqualToString:@"CurrentSpeed"]) {
-                self.currentSpeed = [needEle stringValue];
+            if ([dict[@"CurrentSpeed"] isKindOfClass:[NSString class]]) {
+                self.currentSpeed = dict[@"CurrentSpeed"];
             }
         }
     }
@@ -51,27 +49,16 @@
 
 @end
 
+@implementation NSString(UPnP)
 
-@implementation  NSString(UPnP)
-/*
- H+:MM:SS[.F+] or H+:MM:SS[.F0/F1]
- where :
- •	H+ means one or more digits to indicate elapsed hours
- •	MM means exactly 2 digits to indicate minutes (00 to 59)
- •	SS means exactly 2 digits to indicate seconds (00 to 59)
- •	[.F+] means optionally a dot followed by one or more digits to indicate fractions of seconds
- •	[.F0/F1] means optionally a dot followed by a fraction, with F0 and F1 at least one digit long, and F0 < F1
- */
-+(NSString *)stringWithDurationTime:(float)timeValue
-{
++(NSString *)stringWithDurationTime:(float)timeValue {
     return [NSString stringWithFormat:@"%02d:%02d:%02d",
             (int)(timeValue / 3600.0),
             (int)(fmod(timeValue, 3600.0) / 60.0),
             (int)fmod(timeValue, 60.0)];
 }
 
-- (float)durationTime
-{
+- (float)durationTime {
     NSArray *timeStrings = [self componentsSeparatedByString:@":"];
     int timeStringsCount = (int)[timeStrings count];
     if (timeStringsCount < 3)
@@ -99,4 +86,5 @@
     }
     return durationTime;
 }
+
 @end

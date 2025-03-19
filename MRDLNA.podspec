@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRDLNA'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'DLNA投屏'
 
 
@@ -21,11 +21,13 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'MQL9011' => '301063915@qq.com' }
   s.source           = { :git => 'https://github.com/MQL9011/MRDLNA.git', :tag => s.version.to_s }
-  s.social_media_url = 'http://cocomccree.cn/'
+  s.social_media_url = 'https://github.com/MQL9011'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'MRDLNA/Classes/ARC/**/*'
+  
+  s.public_header_files = 'MRDLNA/Classes/ARC/**/*.h'
   
   # s.resource_bundles = {
   #   'MRDLNA' => ['MRDLNA/Assets/*.png']
@@ -40,9 +42,4 @@ Pod::Spec.new do |s|
       'HEADER_SEARCH_PATHS' => '${SDKROOT}/usr/include/libxml2',
       'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
   }
-  
-  s.subspec 'MRC' do |sp|
-      sp.source_files = 'MRDLNA/Classes/MRC/**/*'
-      sp.requires_arc = false
-  end
 end

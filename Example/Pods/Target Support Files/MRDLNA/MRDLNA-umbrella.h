@@ -17,9 +17,10 @@
 #import "CLUPnPRenderer.h"
 #import "CLUPnPResponseDelegate.h"
 #import "CLUPnPServer.h"
+#import "CLXMLDocument.h"
+#import "CLXMLParser.h"
 #import "StopAction.h"
 #import "MRDLNA.h"
-#import "GDataXMLNode.h"
 
 FOUNDATION_EXPORT double MRDLNAVersionNumber;
 FOUNDATION_EXPORT const unsigned char MRDLNAVersionString[];
