@@ -7,7 +7,7 @@
 //
 
 #import "CLUPnP.h"
-#import "GDataXMLNode.h"
+#import "CLXMLParser.h"
 
 @implementation CLUPnPDevice
 
@@ -34,27 +34,24 @@
 
 - (void)setArray:(NSArray *)array{
     @autoreleasepool {
-        for (int j = 0; j < [array count]; j++) {
-            GDataXMLElement *ele = [array objectAtIndex:j];
-            if ([ele.name isEqualToString:@"friendlyName"]) {
-                self.friendlyName = [ele stringValue];
+        for (NSDictionary *dict in array) {
+            if ([dict[@"friendlyName"] isKindOfClass:[NSString class]]) {
+                self.friendlyName = dict[@"friendlyName"];
             }
-            if ([ele.name isEqualToString:@"modelName"]) {
-                self.modelName = [ele stringValue];
+            if ([dict[@"modelName"] isKindOfClass:[NSString class]]) {
+                self.modelName = dict[@"modelName"];
             }
-            if ([ele.name isEqualToString:@"serviceList"]) {
-                NSArray *serviceListArray = [ele children];
-                for (int k = 0; k < [serviceListArray count]; k++) {
-                    GDataXMLElement *listEle = [serviceListArray objectAtIndex:k];
-                    if ([listEle.name isEqualToString:@"service"]) {
-                        NSString *serviceString = [listEle stringValue];
-                        if ([serviceString rangeOfString:serviceType_AVTransport].location != NSNotFound || [serviceString rangeOfString:serviceId_AVTransport].location != NSNotFound) {
-                            
-                            [self.AVTransport setArray:[listEle children]];
-                            
-                        }else if ([serviceString rangeOfString:serviceType_RenderingControl].location != NSNotFound || [serviceString rangeOfString:serviceId_RenderingControl].location != NSNotFound){
-                            
-                            [self.RenderingControl setArray:[listEle children]];
+            if ([dict[@"serviceList"] isKindOfClass:[NSArray class]]) {
+                NSArray *serviceListArray = dict[@"serviceList"];
+                for (NSDictionary *serviceDict in serviceListArray) {
+                    if ([serviceDict[@"service"] isKindOfClass:[NSString class]]) {
+                        NSString *serviceString = serviceDict[@"service"];
+                        if ([serviceString rangeOfString:serviceType_AVTransport].location != NSNotFound || 
+                            [serviceString rangeOfString:serviceId_AVTransport].location != NSNotFound) {
+                            [self.AVTransport setArray:serviceDict[@"children"]];
+                        } else if ([serviceString rangeOfString:serviceType_RenderingControl].location != NSNotFound || 
+                                  [serviceString rangeOfString:serviceId_RenderingControl].location != NSNotFound) {
+                            [self.RenderingControl setArray:serviceDict[@"children"]];
                         }
                     }
                 }
@@ -75,22 +72,21 @@
 
 - (void)setArray:(NSArray *)array{
     @autoreleasepool {
-        for (int m = 0; m < array.count; m++) {
-            GDataXMLElement *needEle = [array objectAtIndex:m];
-            if ([needEle.name isEqualToString:@"serviceType"]) {
-                self.serviceType = [needEle stringValue];
+        for (NSDictionary *dict in array) {
+            if ([dict[@"serviceType"] isKindOfClass:[NSString class]]) {
+                self.serviceType = dict[@"serviceType"];
             }
-            if ([needEle.name isEqualToString:@"serviceId"]) {
-                self.serviceId = [needEle stringValue];
+            if ([dict[@"serviceId"] isKindOfClass:[NSString class]]) {
+                self.serviceId = dict[@"serviceId"];
             }
-            if ([needEle.name isEqualToString:@"controlURL"]) {
-                self.controlURL = [needEle stringValue];
+            if ([dict[@"controlURL"] isKindOfClass:[NSString class]]) {
+                self.controlURL = dict[@"controlURL"];
             }
-            if ([needEle.name isEqualToString:@"eventSubURL"]) {
-                self.eventSubURL = [needEle stringValue];
+            if ([dict[@"eventSubURL"] isKindOfClass:[NSString class]]) {
+                self.eventSubURL = dict[@"eventSubURL"];
             }
-            if ([needEle.name isEqualToString:@"SCPDURL"]) {
-                self.SCPDURL = [needEle stringValue];
+            if ([dict[@"SCPDURL"] isKindOfClass:[NSString class]]) {
+                self.SCPDURL = dict[@"SCPDURL"];
             }
         }
     }

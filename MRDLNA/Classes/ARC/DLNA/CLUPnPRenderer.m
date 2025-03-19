@@ -7,7 +7,7 @@
 //
 
 #import "CLUPnP.h"
-#import "GDataXMLNode.h"
+#import "CLXMLParser.h"
 #import "CLUPnPAction.h"
 
 #define VideoDIDL @"<DIDL-Lite xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:sec=\"http://www.sec.co.kr/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\"><item id=\"f-0\" parentID=\"0\" restricted=\"0\"><dc:title>Video</dc:title><dc:creator>Anonymous</dc:creator><upnp:class>object.item.videoItem</upnp:class><res protocolInfo=\"http-get:*:video/*:DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01700000000000000000000000000000\" sec:URIType=\"public\">%@</res></item></DIDL-Lite>"
@@ -42,7 +42,6 @@
     [action setArgumentValue:urlStr forName:@"NextURI"];
     [action setArgumentValue:@"" forName:@"NextURIMetaData"];
     [self postRequestWith:action];
-    
 }
 
 - (void)play{
@@ -144,51 +143,45 @@
 #pragma mark -
 #pragma mark -- 动作响应 --
 - (void)parseRequestResponseData:(NSData *)data postXML:(NSString *)postXML{
-    GDataXMLDocument *xmlDoc = [[GDataXMLDocument alloc] initWithData:data options:0 error:nil];
-    GDataXMLElement *xmlEle = [xmlDoc rootElement];
-    NSArray *bigArray = [xmlEle children];
-    for (int i = 0; i < [bigArray count]; i++) {
-        GDataXMLElement *element = [bigArray objectAtIndex:i];
-        NSArray *needArr = [element children];
-        if ([[element name] hasSuffix:@"Body"]) {
-            [self resultsWith:needArr postXML:postXML];
-        }else{
-            [self _UndefinedResponse:[xmlEle XMLString] postXML:postXML];
-        }
+    NSString *xmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *xmlDict = [CLXMLParser parseXMLString:xmlString];
+    
+    if ([xmlDict[@"s:Body"] isKindOfClass:[NSDictionary class]]) {
+        [self resultsWith:xmlDict[@"s:Body"] postXML:postXML];
+    } else {
+        [self _UndefinedResponse:xmlString postXML:postXML];
     }
 }
 
-- (void)resultsWith:(NSArray *)array postXML:(NSString *)postXML{
-    for (int i = 0; i < array.count; i++) {
-        GDataXMLElement *ele = [array objectAtIndex:i];
-        if ([[ele name] hasSuffix:@"SetAVTransportURIResponse"]) {
-            [self _SetAVTransportURIResponse];
-            [self getTransportInfo];
-        }else if ([[ele name] hasSuffix:@"SetNextAVTransportURIResponse"]){
-            [self _SetNextAVTransportURIResponse];
-        }else if ([[ele name] hasSuffix:@"PauseResponse"]){
-            [self _PauseResponse];
-        }else if ([[ele name] hasSuffix:@"PlayResponse"]){
-            [self _PlayResponse];
-        }else if ([[ele name] hasSuffix:@"StopResponse"]){
-            [self _StopResponse];
-        }else if ([[ele name] hasSuffix:@"SeekResponse"]){
-            [self _SeekResponse];
-        }else if ([[ele name] hasSuffix:@"NextResponse"]){
-            [self _NextResponse];
-        }else if ([[ele name] hasSuffix:@"PreviousResponse"]){
-            [self _PreviousResponse];
-        }else if ([[ele name] hasSuffix:@"SetVolumeResponse"]){
-            [self _SetVolumeResponse];
-        }else if ([[ele name] hasSuffix:@"GetVolumeResponse"]){
-            [self _GetVolumeSuccessWith:[ele children]];
-        }else if ([[ele name] hasSuffix:@"GetPositionInfoResponse"]){
-            [self _GetPositionInfoResponseWith:[ele children]];
-        }else if ([[ele name] hasSuffix:@"GetTransportInfoResponse"]){
-            [self _GetTransportInfoResponseWith:[ele children]];
-        }else{
-            [self _UndefinedResponse:[ele XMLString] postXML:postXML];
-        }
+- (void)resultsWith:(NSDictionary *)dict postXML:(NSString *)postXML{
+    NSString *responseName = [[dict allKeys] firstObject];
+    if ([responseName hasSuffix:@"SetAVTransportURIResponse"]) {
+        [self _SetAVTransportURIResponse];
+        [self getTransportInfo];
+    } else if ([responseName hasSuffix:@"SetNextAVTransportURIResponse"]) {
+        [self _SetNextAVTransportURIResponse];
+    } else if ([responseName hasSuffix:@"PauseResponse"]) {
+        [self _PauseResponse];
+    } else if ([responseName hasSuffix:@"PlayResponse"]) {
+        [self _PlayResponse];
+    } else if ([responseName hasSuffix:@"StopResponse"]) {
+        [self _StopResponse];
+    } else if ([responseName hasSuffix:@"SeekResponse"]) {
+        [self _SeekResponse];
+    } else if ([responseName hasSuffix:@"NextResponse"]) {
+        [self _NextResponse];
+    } else if ([responseName hasSuffix:@"PreviousResponse"]) {
+        [self _PreviousResponse];
+    } else if ([responseName hasSuffix:@"SetVolumeResponse"]) {
+        [self _SetVolumeResponse];
+    } else if ([responseName hasSuffix:@"GetVolumeResponse"]) {
+        [self _GetVolumeSuccessWith:dict[responseName]];
+    } else if ([responseName hasSuffix:@"GetPositionInfoResponse"]) {
+        [self _GetPositionInfoResponseWith:dict[responseName]];
+    } else if ([responseName hasSuffix:@"GetTransportInfoResponse"]) {
+        [self _GetTransportInfoResponseWith:dict[responseName]];
+    } else {
+        [self _UndefinedResponse:dict postXML:postXML];
     }
 }
 
@@ -248,38 +241,33 @@
     }
 }
 
-- (void)_GetVolumeSuccessWith:(NSArray *)array{
-    for (int j = 0; j < array.count; j++) {
-        GDataXMLElement *eleXml = [array objectAtIndex:j];
-        if ([[eleXml name] isEqualToString:@"CurrentVolume"]) {
-            if ([self.delegate respondsToSelector:@selector(upnpGetVolumeResponse:)]) {
-                [self.delegate upnpGetVolumeResponse:[eleXml stringValue]];
-            }
-        }
+- (void)_GetVolumeSuccessWith:(NSDictionary *)dict{
+    if ([self.delegate respondsToSelector:@selector(upnpGetVolumeResponse:)]) {
+        [self.delegate upnpGetVolumeResponse:dict[@"CurrentVolume"]];
     }
 }
 
-- (void)_GetPositionInfoResponseWith:(NSArray *)array{
+- (void)_GetPositionInfoResponseWith:(NSDictionary *)dict{
     CLUPnPAVPositionInfo *info = [[CLUPnPAVPositionInfo alloc] init];
-    [info setArray:array];
+    [info setDictionary:dict];
     if ([self.delegate respondsToSelector:@selector(upnpGetPositionInfoResponse:)]) {
         [self.delegate upnpGetPositionInfoResponse:info];
     }
 }
 
-- (void)_GetTransportInfoResponseWith:(NSArray *)array{
+- (void)_GetTransportInfoResponseWith:(NSDictionary *)dict{
     CLUPnPTransportInfo *info = [[CLUPnPTransportInfo alloc] init];
-    [info setArray:array];
+    [info setDictionary:dict];
     if ([self.delegate respondsToSelector:@selector(upnpGetTransportInfoResponse:)]) {
         [self.delegate upnpGetTransportInfoResponse:info];
     }
 }
 
-- (void)_UndefinedResponse:(NSString *)xmlStr postXML:(NSString *)postXML{
+- (void)_UndefinedResponse:(id)response postXML:(NSString *)postXML{
     NSLog(@"===========发送信息:%@ \n",postXML);
-    NSLog(@"===========响应信息:%@ \n",xmlStr);
+    NSLog(@"===========响应信息:%@ \n",response);
     if ([self.delegate respondsToSelector:@selector(upnpUndefinedResponse:postXML:)]) {
-        [self.delegate upnpUndefinedResponse:xmlStr postXML:postXML];
+        [self.delegate upnpUndefinedResponse:response postXML:postXML];
     }
 }
 

@@ -9,7 +9,7 @@
 #import "CLUPnP.h"
 #import "CLUPnPServer.h"
 #import "GCDAsyncUdpSocket.h"
-#import "GDataXMLNode.h"
+#import "CLXMLParser.h"
 
 @interface CLUPnPServer ()<GCDAsyncUdpSocketDelegate>
 
@@ -188,7 +188,6 @@ withFilterContext:(nullable id)filterContext{
     if (!device){
         return;
     }
-//    NSLog(@"%@",device.description);
     [self.deviceDictionary setObject:device forKey:usn];
     [self onChange];
 }
@@ -248,45 +247,25 @@ withFilterContext:(nullable id)filterContext{
         }else{
             if (response != nil && data != nil) {
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-                if ([httpResponse statusCode] == 200) {
+                if (httpResponse.statusCode == 200) {
+                    NSString *xmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    NSArray *array = [CLXMLParser parseXMLArray:xmlString];
                     device = [[CLUPnPDevice alloc] init];
-                    device.loaction = URL;
                     device.uuid = usn;
-                    GDataXMLDocument *xmlDoc = [[GDataXMLDocument alloc] initWithData:data options:0 error:nil];
-                    GDataXMLElement *xmlEle = [xmlDoc rootElement];
-                    NSArray *xmlArray = [xmlEle children];
-                    
-                    for (int i = 0; i < [xmlArray count]; i++) {
-                        GDataXMLElement *element = [xmlArray objectAtIndex:i];
-                        if ([[element name] isEqualToString:@"device"]) {
-                            [device setArray:[element children]];
-                            continue;
-                        }
-                    }
+                    device.loaction = location;
+                    [device setArray:array];
                 }
             }
         }
         dispatch_semaphore_signal(seamphore);
     }] resume];
+    
     dispatch_semaphore_wait(seamphore, DISPATCH_TIME_FOREVER);
     return device;
 }
 
-- (BOOL)isNilString:(NSString *)_str{
-    if(_str == nil || _str == NULL || [_str isEqual:@"null"] || [_str isEqual:[NSNull null]] || [_str isKindOfClass:[NSNull class]]){
-        return YES;
-    }
-    if (![_str isKindOfClass:[NSString class]]) {
-        return YES;
-    }
-    _str = [NSString stringWithFormat:@"%@", _str];
-    if([_str isEqualToString:@"(null)"]){
-        return YES;
-    }
-    if ([_str isEqualToString:@""]) {
-        return YES;
-    }
-    if ([_str isEqualToString:@"<null>"]) {
+- (BOOL)isNilString:(NSString *)string{
+    if (string == nil || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@""] || [string isEqualToString:@"(null)"] || [string isEqualToString:@"<null>"]) {
         return YES;
     }
     return NO;
