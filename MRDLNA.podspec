@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRDLNA'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'DLNA投屏'
 
 
   s.description      = <<-DESC
-  DLNA投屏,支持各大主流盒子互联网电视.
+  DLNA投屏,支持各大主流盒子互联网电视. v0.3.0更新: 修复拼写错误, 优化DIDL-Lite支持多媒体类型, 增强线程安全性, 改善错误处理机制.
                        DESC
 
   s.homepage         = 'https://github.com/MQL9011/MRDLNA'
