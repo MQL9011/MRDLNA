@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git tag:*)",
+      "Bash(git push:*)",
+      "Bash(pod lib lint:*)",
+      "Bash(pod spec lint:*)",
+      "Bash(pod trunk push:*)",
+      "Bash(pod trunk:*)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": []

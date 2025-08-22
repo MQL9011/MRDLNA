@@ -61,24 +61,57 @@
 }
 
 - (NSString *)getSearchString{
-    return [NSString stringWithFormat:@"M-SEARCH * HTTP/1.1\r\nHOST: %@:%d\r\nMAN: \"ssdp:discover\"\r\nMX: 3\r\nST: %@\r\nUSER-AGENT: iOS UPnP/1.1 mccree/1.0\r\n\r\n", ssdpAddres, ssdpPort, serviceType_AVTransport];
+    return [NSString stringWithFormat:@"M-SEARCH * HTTP/1.1\r\nHOST: %@:%d\r\nMAN: \"ssdp:discover\"\r\nMX: 3\r\nST: %@\r\nUSER-AGENT: iOS UPnP/1.1 MRDLNA/0.3.0\r\n\r\n", ssdpAddres, ssdpPort, serviceType_AVTransport];
+}
+
+- (void)searchForAllDevices {
+    // 搜索所有UPnP设备，提高发现率
+    NSArray *searchTypes = @[
+        @"upnp:rootdevice",
+        @"urn:schemas-upnp-org:device:MediaRenderer:1",
+        @"urn:schemas-upnp-org:service:AVTransport:1",
+        @"ssdp:all"
+    ];
+    
+    for (NSString *searchType in searchTypes) {
+        NSString *searchString = [NSString stringWithFormat:@"M-SEARCH * HTTP/1.1\r\nHOST: %@:%d\r\nMAN: \"ssdp:discover\"\r\nMX: 3\r\nST: %@\r\nUSER-AGENT: iOS UPnP/1.1 MRDLNA/0.3.0\r\n\r\n", ssdpAddres, ssdpPort, searchType];
+        NSData *sendData = [searchString dataUsingEncoding:NSUTF8StringEncoding];
+        [_udpSocket sendData:sendData toHost:ssdpAddres port:ssdpPort withTimeout:-1 tag:1];
+        
+        // 小延迟避免网络拥堵
+        usleep(100000); // 100ms
+    }
 }
 
 - (void)start{
     NSError *error = nil;
-    if (![_udpSocket bindToPort:ssdpPort error:&error]){
+    
+    // 先停止之前的socket避免冲突
+    [_udpSocket close];
+    
+    // 重新初始化socket
+    _udpSocket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
+    
+    // iOS 16+ 需要先尝试绑定到0端口，让系统自动分配
+    if (![_udpSocket bindToPort:0 error:&error]) {
+        CLLog(@"绑定端口失败: %@", error);
         [self onError:error];
+        return;
     }
     
-    if (![_udpSocket beginReceiving:&error])
-    {
+    if (![_udpSocket beginReceiving:&error]) {
+        CLLog(@"开始接收数据失败: %@", error);
         [self onError:error];
+        return;
     }
     
-    if (![_udpSocket joinMulticastGroup:ssdpAddres error:&error])
-    {
+    if (![_udpSocket joinMulticastGroup:ssdpAddres error:&error]) {
+        CLLog(@"加入组播组失败: %@", error);
         [self onError:error];
+        return;
     }
+    
+    CLLog(@"UDP Socket 启动成功");
     [self search];
 }
 
@@ -91,6 +124,11 @@
     [self.deviceDictionary removeAllObjects];
     self.receiveDevice = YES;
     [self onChange];
+    
+    // 使用增强的搜索方法
+    [self searchForAllDevices];
+    
+    // 备用的标准搜索
     NSData * sendData = [[self getSearchString] dataUsingEncoding:NSUTF8StringEncoding];
     [_udpSocket sendData:sendData toHost:ssdpAddres port:ssdpPort withTimeout:-1 tag:1];
 }
@@ -115,7 +153,24 @@
 }
 
 - (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError  * _Nullable)error{
-    CLLog(@"udpSocket关闭");
+    CLLog(@"udpSocket关闭 - Error: %@", error);
+    
+    // iOS 16+ 网络权限问题处理
+    if (error) {
+        [self onError:error];
+        
+        // 自动重连机制 (避免频繁重连)
+        static NSTimeInterval lastReconnectTime = 0;
+        NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
+        
+        if (currentTime - lastReconnectTime > 5.0) { // 5秒内不重复重连
+            lastReconnectTime = currentTime;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                CLLog(@"尝试重新启动UDP socket");
+                [self start];
+            });
+        }
+    }
 }
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data
@@ -127,7 +182,20 @@ withFilterContext:(nullable id)filterContext{
 // 判断设备
 - (void)JudgeDeviceWithData:(NSData *)data{
     @autoreleasepool {
+        if (!data || data.length == 0) {
+            CLLog(@"收到空数据，跳过处理");
+            return;
+        }
+        
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if (!string || string.length == 0) {
+            CLLog(@"数据解码失败，尝试其他编码");
+            string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+            if (!string) {
+                return;
+            }
+        }
+        
         if ([string hasPrefix:@"NOTIFY"]) {
             NSString *serviceType = [self headerValueForKey:@"NT:" inData:string];
             if ([serviceType isEqualToString:serviceType_AVTransport]) {
@@ -269,6 +337,34 @@ withFilterContext:(nullable id)filterContext{
         return YES;
     }
     return NO;
+}
+
+- (void)checkNetworkPermission {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 简单的网络连通性测试
+        NSURL *testURL = [NSURL URLWithString:@"http://www.apple.com"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:testURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
+        
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            BOOL hasPermission = (error == nil);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                CLLog(@"网络权限检查结果: %@", hasPermission ? @"正常" : @"异常");
+                if (self.delegate && [self.delegate respondsToSelector:@selector(upnpNetworkPermissionStatus:)]) {
+                    [self.delegate upnpNetworkPermissionStatus:hasPermission];
+                }
+                
+                if (!hasPermission) {
+                    NSError *networkError = [NSError errorWithDomain:@"MRDLNANetworkDomain" 
+                                                               code:-1001 
+                                                           userInfo:@{NSLocalizedDescriptionKey: @"网络权限受限，请检查设置"}];
+                    [self onError:networkError];
+                }
+            });
+        }];
+        
+        [task resume];
+    });
 }
 
 @end

@@ -182,4 +182,13 @@
     _searchTime = searchTime;
     self.upd.searchTime = searchTime;
 }
+
+- (void)checkNetworkStatus {
+    [self.upd checkNetworkPermission];
+}
+
++ (NSString *)libraryVersion {
+    return @"0.3.0";
+}
+
 @end

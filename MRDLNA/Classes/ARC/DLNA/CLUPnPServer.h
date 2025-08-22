@@ -26,6 +26,14 @@
  */
 - (void)upnpSearchErrorWithError:(NSError *)error;
 
+@optional
+/**
+ 网络权限状态检查结果
+ 
+ @param hasPermission 是否有网络权限
+ */
+- (void)upnpNetworkPermissionStatus:(BOOL)hasPermission;
+
 @end
 
 @interface CLUPnPServer : NSObject
@@ -57,5 +65,10 @@
  @return Device Array
  */
 - (NSArray<CLUPnPDevice *> *)getDeviceList;
+
+/**
+ 检查网络权限状态
+ */
+- (void)checkNetworkPermission;
 
 @end

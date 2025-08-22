@@ -85,4 +85,15 @@
  播放切集
  */
 - (void)playTheURL:(NSString *)url;
+
+/**
+ 检查网络权限和连通性
+ */
+- (void)checkNetworkStatus;
+
+/**
+ 获取当前DLNA库版本
+ */
++ (NSString *)libraryVersion;
+
 @end
