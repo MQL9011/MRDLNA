@@ -27,7 +27,7 @@
 
 - (NSString *)URLHeader{
     if (!_URLHeader) {
-        _URLHeader = [NSString stringWithFormat:@"%@://%@:%@", [self.loaction scheme], [self.loaction host], [self.loaction port]];
+        _URLHeader = [NSString stringWithFormat:@"%@://%@:%@", [self.location scheme], [self.location host], [self.location port]];
     }
     return _URLHeader;
 }
@@ -62,7 +62,7 @@
 }
 
 - (NSString *)description{
-    NSString * string = [NSString stringWithFormat:@"\nuuid:%@\nlocation:%@\nURLHeader:%@\nfriendlyName:%@\nmodelName:%@\n",self.uuid,self.loaction,self.URLHeader,self.friendlyName,self.modelName];
+    NSString * string = [NSString stringWithFormat:@"\nuuid:%@\nlocation:%@\nURLHeader:%@\nfriendlyName:%@\nmodelName:%@\n",self.uuid,self.location,self.URLHeader,self.friendlyName,self.modelName];
     return string;
 }
 

@@ -13,7 +13,7 @@
 @interface CLUPnPDevice : NSObject
 
 @property (nonatomic, copy) NSString    *uuid;
-@property (nonatomic, strong) NSURL     *loaction;
+@property (nonatomic, strong) NSURL     *location;
 @property (nonatomic, copy) NSString    *URLHeader;
 
 @property (nonatomic, copy) NSString *friendlyName;

@@ -147,10 +147,12 @@
             [deviceMarr addObject:device];
         }
     }
-    if ([self.delegate respondsToSelector:@selector(searchDLNAResult:)]) {
-        [self.delegate searchDLNAResult:[deviceMarr copy]];
-    }
-    self.dataArray = deviceMarr;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(searchDLNAResult:)]) {
+            [self.delegate searchDLNAResult:[deviceMarr copy]];
+        }
+        self.dataArray = deviceMarr;
+    });
 }
 
 - (void)upnpSearchErrorWithError:(NSError *)error{

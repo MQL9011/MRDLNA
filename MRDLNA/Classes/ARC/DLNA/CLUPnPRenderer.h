@@ -31,6 +31,14 @@
 - (void)setAVTransportURL:(NSString *)urlStr;
 
 /**
+ 设置投屏地址(带媒体信息)
+ @param urlStr 媒体url
+ @param title 媒体标题
+ @param creator 创建者
+ */
+- (void)setAVTransportURL:(NSString *)urlStr title:(NSString *)title creator:(NSString *)creator;
+
+/**
  设置下一个播放地址
  @param urlStr 下一个视频url
  */

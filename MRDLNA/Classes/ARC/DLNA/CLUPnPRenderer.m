@@ -10,7 +10,12 @@
 #import "CLXMLParser.h"
 #import "CLUPnPAction.h"
 
-#define VideoDIDL @"<DIDL-Lite xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:sec=\"http://www.sec.co.kr/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\"><item id=\"f-0\" parentID=\"0\" restricted=\"0\"><dc:title>Video</dc:title><dc:creator>Anonymous</dc:creator><upnp:class>object.item.videoItem</upnp:class><res protocolInfo=\"http-get:*:video/*:DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01700000000000000000000000000000\" sec:URIType=\"public\">%@</res></item></DIDL-Lite>"
+// DIDL-Lite templates for different media types
+#define DIDL_VIDEO_TEMPLATE @"<DIDL-Lite xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:sec=\"http://www.sec.co.kr/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\"><item id=\"f-0\" parentID=\"0\" restricted=\"0\"><dc:title>%@</dc:title><dc:creator>%@</dc:creator><upnp:class>object.item.videoItem</upnp:class><res protocolInfo=\"http-get:*:video/*:DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01700000000000000000000000000000\" sec:URIType=\"public\">%@</res></item></DIDL-Lite>"
+
+#define DIDL_AUDIO_TEMPLATE @"<DIDL-Lite xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\"><item id=\"f-0\" parentID=\"0\" restricted=\"0\"><dc:title>%@</dc:title><dc:creator>%@</dc:creator><upnp:class>object.item.audioItem.musicTrack</upnp:class><res protocolInfo=\"http-get:*:audio/*:DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01700000000000000000000000000000\">%@</res></item></DIDL-Lite>"
+
+#define DIDL_IMAGE_TEMPLATE @"<DIDL-Lite xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\"><item id=\"f-0\" parentID=\"0\" restricted=\"0\"><dc:title>%@</dc:title><dc:creator>%@</dc:creator><upnp:class>object.item.imageItem</upnp:class><res protocolInfo=\"http-get:*:image/*:DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=00900000000000000000000000000000\">%@</res></item></DIDL-Lite>"
 
 @implementation CLUPnPRenderer
 
@@ -26,13 +31,83 @@
     _model = model;
 }
 
+#pragma mark - DIDL-Lite Helper Methods
+
+- (NSString *)createDIDLForURL:(NSString *)urlStr title:(NSString *)title creator:(NSString *)creator {
+    if (!title || title.length == 0) {
+        title = @"Unknown Media";
+    }
+    if (!creator || creator.length == 0) {
+        creator = @"Unknown";
+    }
+    
+    NSString *template = [self getDIDLTemplateForURL:urlStr];
+    return [NSString stringWithFormat:template, title, creator, urlStr];
+}
+
+- (NSString *)getDIDLTemplateForURL:(NSString *)urlStr {
+    NSString *lowercaseURL = [urlStr lowercaseString];
+    
+    // Video formats
+    if ([lowercaseURL containsString:@".mp4"] || 
+        [lowercaseURL containsString:@".avi"] || 
+        [lowercaseURL containsString:@".mkv"] || 
+        [lowercaseURL containsString:@".mov"] ||
+        [lowercaseURL containsString:@".wmv"] ||
+        [lowercaseURL containsString:@".flv"] ||
+        [lowercaseURL containsString:@"video/"]) {
+        return DIDL_VIDEO_TEMPLATE;
+    }
+    
+    // Audio formats
+    if ([lowercaseURL containsString:@".mp3"] || 
+        [lowercaseURL containsString:@".wav"] || 
+        [lowercaseURL containsString:@".flac"] || 
+        [lowercaseURL containsString:@".aac"] ||
+        [lowercaseURL containsString:@".ogg"] ||
+        [lowercaseURL containsString:@"audio/"]) {
+        return DIDL_AUDIO_TEMPLATE;
+    }
+    
+    // Image formats
+    if ([lowercaseURL containsString:@".jpg"] || 
+        [lowercaseURL containsString:@".jpeg"] || 
+        [lowercaseURL containsString:@".png"] || 
+        [lowercaseURL containsString:@".gif"] ||
+        [lowercaseURL containsString:@".bmp"] ||
+        [lowercaseURL containsString:@"image/"]) {
+        return DIDL_IMAGE_TEMPLATE;
+    }
+    
+    // Default to video template
+    return DIDL_VIDEO_TEMPLATE;
+}
+
 #pragma mark -
 #pragma mark -- AVTransport动作 --
 - (void)setAVTransportURL:(NSString *)urlStr{
+    if (!urlStr || urlStr.length == 0) {
+        CLLog(@"Invalid URL: %@", urlStr);
+        return;
+    }
+    
     CLUPnPAction *action = [[CLUPnPAction alloc] initWithAction:@"SetAVTransportURI"];
     [action setArgumentValue:@"0" forName:@"InstanceID"];
     [action setArgumentValue:urlStr forName:@"CurrentURI"];
-    [action setArgumentValue:VideoDIDL forName:@"CurrentURIMetaData"];
+    [action setArgumentValue:[self createDIDLForURL:urlStr title:nil creator:nil] forName:@"CurrentURIMetaData"];
+    [self postRequestWith:action];
+}
+
+- (void)setAVTransportURL:(NSString *)urlStr title:(NSString *)title creator:(NSString *)creator {
+    if (!urlStr || urlStr.length == 0) {
+        CLLog(@"Invalid URL: %@", urlStr);
+        return;
+    }
+    
+    CLUPnPAction *action = [[CLUPnPAction alloc] initWithAction:@"SetAVTransportURI"];
+    [action setArgumentValue:@"0" forName:@"InstanceID"];
+    [action setArgumentValue:urlStr forName:@"CurrentURI"];
+    [action setArgumentValue:[self createDIDLForURL:urlStr title:title creator:creator] forName:@"CurrentURIMetaData"];
     [self postRequestWith:action];
 }
 
