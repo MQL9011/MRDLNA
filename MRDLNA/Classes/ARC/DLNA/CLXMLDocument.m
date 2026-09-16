@@ -45,32 +45,66 @@
     self.value = value;
 }
 
+/**
+ 对齐旧版 GDataXML → libxml2 `xmlEncodeSpecialChars` / `xmlNodeDump` 的特殊字符转义
+ （不链 xml2，规则对齐 libxml2：& < > " 以及 CR）:
+   & → &amp;   < → &lt;   > → &gt;   " → &quot;   CR → &#13;
+ 存节点时仍保持明文；仅在 XMLString 序列化时转义（与 GData 一致）。
+ */
++ (NSString *)xmlEscaped:(NSString *)string {
+    if (string.length == 0) {
+        return string ?: @"";
+    }
+    // 按字符扫描，避免多次 replace 在大 DIDL 上的开销；& 必须先于其它实体语义处理。
+    NSUInteger length = string.length;
+    NSMutableString *escaped = [NSMutableString stringWithCapacity:length + 16];
+    for (NSUInteger i = 0; i < length; i++) {
+        unichar c = [string characterAtIndex:i];
+        switch (c) {
+            case '&':
+                [escaped appendString:@"&amp;"];
+                break;
+            case '<':
+                [escaped appendString:@"&lt;"];
+                break;
+            case '>':
+                [escaped appendString:@"&gt;"];
+                break;
+            case '"':
+                [escaped appendString:@"&quot;"];
+                break;
+            case '\r':
+                [escaped appendString:@"&#13;"];
+                break;
+            default:
+                [escaped appendFormat:@"%C", c];
+                break;
+        }
+    }
+    return escaped;
+}
+
 - (NSString *)XMLString {
     NSMutableString *xmlString = [NSMutableString string];
     
-    // Add attributes
     NSMutableString *attributeString = [NSMutableString string];
     for (CLXMLDocument *attribute in self.attributes) {
-        [attributeString appendFormat:@" %@=\"%@\"", attribute.name, attribute.value];
+        [attributeString appendFormat:@" %@=\"%@\"", attribute.name, [CLXMLDocument xmlEscaped:attribute.value]];
     }
     
-    // Start element
     [xmlString appendFormat:@"<%@%@>", self.name, attributeString];
     
-    // Add children
     for (CLXMLDocument *child in self.children) {
         [xmlString appendString:child.XMLString];
     }
     
-    // Add value if exists
     if (self.value) {
-        [xmlString appendString:self.value];
+        [xmlString appendString:[CLXMLDocument xmlEscaped:self.value]];
     }
     
-    // End element
     [xmlString appendFormat:@"</%@>", self.name];
     
     return xmlString;
 }
 
-@end 
+@end

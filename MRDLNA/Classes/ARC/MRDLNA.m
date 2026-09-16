@@ -8,21 +8,22 @@
 #import "MRDLNA.h"
 #import "StopAction.h"
 
-@interface MRDLNA()<CLUPnPServerDelegate, CLUPnPResponseDelegate>
+@interface MRDLNA () <CLUPnPServerDelegate, CLUPnPResponseDelegate>
 
-@property(nonatomic,strong) CLUPnPServer *upd;              //MDS服务器
-@property(nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) CLUPnPServer *upd;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
-@property(nonatomic,strong) CLUPnPRenderer *render;         //MDR渲染器
-@property(nonatomic,copy) NSString *volume;
-@property(nonatomic,assign) NSInteger seekTime;
-@property(nonatomic,assign) BOOL isPlaying;
+@property (nonatomic, strong) CLUPnPRenderer *render;
+@property (nonatomic, copy) NSString *volumeValue;
+@property (nonatomic, assign) NSInteger seekTime;
+@property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic, copy) void (^getSeekTimeBlock)(CLUPnPAVPositionInfo *);
 
 @end
 
 @implementation MRDLNA
 
-+ (MRDLNA *)sharedMRDLNAManager{
++ (MRDLNA *)sharedMRDLNAManager {
     static MRDLNA *instance = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -31,8 +32,7 @@
     return instance;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.upd = [CLUPnPServer shareServer];
@@ -43,106 +43,81 @@
     return self;
 }
 
-/**
- ** DLNA投屏
- */
-- (void)startDLNA{
+- (void)startDLNA {
     [self initCLUPnPRendererAndDlnaPlay];
 }
-/**
- ** DLNA投屏
- ** 【流程: 停止 ->设置代理 ->设置Url -> 播放】
- */
-- (void)startDLNAAfterStop{
-    StopAction *action = [[StopAction alloc]initWithDevice:self.device Success:^{
+
+- (void)startDLNAAfterStop {
+    StopAction *action = [[StopAction alloc] initWithDevice:self.device Success:^{
         [self initCLUPnPRendererAndDlnaPlay];
-        
     } failure:^{
         [self initCLUPnPRendererAndDlnaPlay];
     }];
     [action executeAction];
 }
-/**
- 初始化CLUPnPRenderer
- */
--(void)initCLUPnPRendererAndDlnaPlay{
+
+- (void)initCLUPnPRendererAndDlnaPlay {
     self.render = [[CLUPnPRenderer alloc] initWithModel:self.device];
     self.render.delegate = self;
     [self.render setAVTransportURL:self.playUrl];
 }
-/**
- 退出DLNA
- */
-- (void)endDLNA{
+
+- (void)endDLNA {
     [self.render stop];
 }
 
-/**
- 播放
- */
-- (void)dlnaPlay{
+- (void)dlnaPlay {
     [self.render play];
 }
 
-
-/**
- 暂停
- */
-- (void)dlnaPause{
+- (void)dlnaPause {
     [self.render pause];
 }
 
-/**
- 搜设备
- */
-- (void)startSearch{
+- (void)startSearch {
     [self.upd start];
 }
 
-
-/**
- 设置音量
- */
-- (void)volumeChanged:(NSString *)volume{
-    self.volume = volume;
+- (void)volumeChanged:(NSString *)volume {
+    self.volumeValue = volume;
     [self.render setVolumeWith:volume];
 }
 
+- (void)setVolume:(NSInteger)volume {
+    NSInteger value = MAX(0, MIN(volume, 100));
+    _volume = value;
+    NSString *strValue = [NSString stringWithFormat:@"%ld", (long)value];
+    [self volumeChanged:strValue];
+}
 
-/**
- 播放进度条
- */
-- (void)seekChanged:(NSInteger)seek{
+- (void)seekChanged:(NSInteger)seek {
     self.seekTime = seek;
     NSString *seekStr = [self timeFormatted:seek];
     [self.render seekToTarget:seekStr Unit:unitREL_TIME];
 }
 
-
-/**
- 播放进度单位转换成string
- */
-- (NSString *)timeFormatted:(NSInteger)totalSeconds
-{
+- (NSString *)timeFormatted:(NSInteger)totalSeconds {
     NSInteger seconds = totalSeconds % 60;
     NSInteger minutes = (totalSeconds / 60) % 60;
     NSInteger hours = totalSeconds / 3600;
-    return [NSString stringWithFormat:@"%02ld:%02ld:%02ld",(long)hours, (long)minutes, (long)seconds];
+    return [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)hours, (long)minutes, (long)seconds];
 }
 
-/**
- 播放切集
- */
-- (void)playTheURL:(NSString *)url{
+- (void)playTheURL:(NSString *)url {
     self.playUrl = url;
     [self.render setAVTransportURL:url];
 }
 
-#pragma mark -- 搜索协议CLUPnPDeviceDelegate回调
-- (void)upnpSearchChangeWithResults:(NSArray<CLUPnPDevice *> *)devices{
+- (void)getSeekTime:(void (^)(CLUPnPAVPositionInfo *))block {
+    self.getSeekTimeBlock = [block copy];
+    [self.render getPositionInfo];
+}
+
+#pragma mark - CLUPnPServerDelegate
+
+- (void)upnpSearchChangeWithResults:(NSArray<CLUPnPDevice *> *)devices {
     NSMutableArray *deviceMarr = [NSMutableArray array];
     for (CLUPnPDevice *device in devices) {
-        // 只返回匹配到视频播放的设备
         if ([device.uuid containsString:serviceType_AVTransport]) {
             [deviceMarr addObject:device];
         }
@@ -155,31 +130,132 @@
     });
 }
 
-- (void)upnpSearchErrorWithError:(NSError *)error{
-//    NSLog(@"DLNA_Error======>%@", error);
+- (void)upnpSearchErrorWithError:(NSError *)error {
+}
+
+- (void)didStartSearch {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlnaSearchDidStart:)]) {
+            [self.delegate dlnaSearchDidStart:self];
+        }
+    });
+}
+
+- (void)didStopSearch {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlnaSearchDidFinish:)]) {
+            [self.delegate dlnaSearchDidFinish:self];
+        }
+    });
 }
 
 #pragma mark - CLUPnPResponseDelegate
-- (void)upnpSetAVTransportURIResponse{
+
+- (void)upnpSetAVTransportURIResponse {
     [self.render play];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:event:)]) {
+            [self.delegate dlna:self event:DLNAEventNextURI];
+        }
+    });
 }
 
-- (void)upnpGetTransportInfoResponse:(CLUPnPTransportInfo *)info{
-//    NSLog(@"%@ === %@", info.currentTransportState, info.currentTransportStatus);
-    if (!([info.currentTransportState isEqualToString:@"PLAYING"] || [info.currentTransportState isEqualToString:@"TRANSITIONING"])) {
+- (void)upnpGetTransportInfoResponse:(CLUPnPTransportInfo *)info {
+    if (!([info.currentTransportState isEqualToString:@"PLAYING"] ||
+          [info.currentTransportState isEqualToString:@"TRANSITIONING"])) {
         [self.render play];
     }
 }
 
-- (void)upnpPlayResponse{
-    if ([self.delegate respondsToSelector:@selector(dlnaStartPlay)]) {
-        [self.delegate dlnaStartPlay];
-    }
+- (void)upnpPreviousResponse {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:event:)]) {
+            [self.delegate dlna:self event:DLNAEventPrevious];
+        }
+    });
 }
 
-#pragma mark Set&Get
-- (void)setSearchTime:(NSInteger)searchTime{
+- (void)upnpNextResponse {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:event:)]) {
+            [self.delegate dlna:self event:DLNAEventNext];
+        }
+    });
+}
+
+- (void)upnpSeekResponse {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:event:)]) {
+            [self.delegate dlna:self event:DLNAEventSeek];
+        }
+    });
+}
+
+- (void)upnpSetVolumeResponse {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:event:)]) {
+            [self.delegate dlna:self event:DLNAEventVolume];
+        }
+    });
+}
+
+- (void)upnpGetVolumeResponse:(NSString *)volume {
+    self.volumeValue = volume;
+    _volume = volume.integerValue;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:event:)]) {
+            [self.delegate dlna:self event:DLNAEventVolume];
+        }
+    });
+}
+
+- (void)upnpPlayResponse {
+    self.state = DLNAStatePlay;
+    [self.render getVolume];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlnaStartPlay)]) {
+            [self.delegate dlnaStartPlay];
+        }
+        if ([self.delegate respondsToSelector:@selector(dlna:state:)]) {
+            [self.delegate dlna:self state:DLNAStatePlay];
+        }
+    });
+}
+
+- (void)upnpStopResponse {
+    self.state = DLNAStateStop;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:state:)]) {
+            [self.delegate dlna:self state:DLNAStateStop];
+        }
+    });
+}
+
+- (void)upnpPauseResponse {
+    self.state = DLNAStatePause;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(dlna:state:)]) {
+            [self.delegate dlna:self state:DLNAStatePause];
+        }
+    });
+}
+
+- (void)upnpGetPositionInfoResponse:(CLUPnPAVPositionInfo *)info {
+    void (^block)(CLUPnPAVPositionInfo *) = self.getSeekTimeBlock;
+    self.getSeekTimeBlock = nil;
+    if (!block) {
+        return;
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        block(info);
+    });
+}
+
+#pragma mark - Set & Get
+
+- (void)setSearchTime:(NSInteger)searchTime {
     _searchTime = searchTime;
     self.upd.searchTime = searchTime;
 }
+
 @end

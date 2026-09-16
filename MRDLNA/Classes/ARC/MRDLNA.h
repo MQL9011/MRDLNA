@@ -9,6 +9,22 @@
 #import "CLUPnP.h"
 #import "CLUPnPDevice.h"
 
+typedef NS_ENUM(NSUInteger, DLNAState) {
+    DLNAStatePlay,
+    DLNAStatePause,
+    DLNAStateStop,
+};
+
+typedef NS_ENUM(NSUInteger, DLNAEvent) {
+    DLNAEventSeek,
+    DLNAEventPrevious,
+    DLNAEventNext,
+    DLNAEventNextURI,
+    DLNAEventVolume,
+};
+
+@class MRDLNA;
+
 @protocol DLNADelegate <NSObject>
 
 @optional
@@ -18,6 +34,11 @@
  */
 - (void)searchDLNAResult:(NSArray *)devicesArray;
 
+/// 与 dlnaSearchDidFinish: 成对；startSearch 后终态必有且仅有一次 Finish（含失败）。
+- (void)dlnaSearchDidStart:(MRDLNA *)dlna;
+- (void)dlnaSearchDidFinish:(MRDLNA *)dlna;
+- (void)dlna:(MRDLNA *)dlna event:(DLNAEvent)event;
+- (void)dlna:(MRDLNA *)dlna state:(DLNAState)state;
 
 /**
  投屏成功开始播放
@@ -28,18 +49,23 @@
 
 @interface MRDLNA : NSObject
 
-@property(nonatomic,weak)id<DLNADelegate> delegate;
+@property (nonatomic, weak) id<DLNADelegate> delegate;
 
-@property(nonatomic, strong) CLUPnPDevice *device;
+@property (nonatomic, strong) CLUPnPDevice *device;
 
-@property(nonatomic,copy) NSString *playUrl;
+@property (nonatomic, copy) NSString *playUrl;
 
-@property(nonatomic,assign) NSInteger searchTime;
+@property (nonatomic, assign) NSInteger searchTime;
+
+@property (nonatomic, assign) DLNAState state;
+
+/// 音量 0–100（读写都会走渲染器）
+@property (nonatomic, assign) NSInteger volume;
 
 /**
  单例
  */
-+(instancetype)sharedMRDLNAManager;
++ (instancetype)sharedMRDLNAManager;
 
 /**
  搜设备
@@ -50,6 +76,7 @@
  DLNA投屏
  */
 - (void)startDLNA;
+
 /**
  DLNA投屏(首先停止)---投屏不了可以使用这个方法
  ** 【流程: 停止 ->设置代理 ->设置Url -> 播放】
@@ -85,4 +112,10 @@
  播放切集
  */
 - (void)playTheURL:(NSString *)url;
+
+/**
+ 获取播放进度。切记在回调执行后再发起下一次 getSeekTime。
+ */
+- (void)getSeekTime:(void (^)(CLUPnPAVPositionInfo *info))block;
+
 @end

@@ -26,6 +26,11 @@
 
 @property (nonatomic, assign) BOOL receiveDevice;
 @property (nonatomic, assign) NSInteger retryCount;
+/// 本轮搜索是否尚未结束（保证 didStopSearch 与 start 成对、且同一轮只回调一次）
+@property (nonatomic, assign) BOOL searchSessionActive;
+@property (nonatomic, assign) NSInteger searchGeneration;
+/// 重试前主动 close，避免 udpSocketDidClose 误结束本轮
+@property (nonatomic, assign) BOOL closingForRetry;
 
 @end
 
@@ -72,6 +77,20 @@
     return [NSString stringWithFormat:@"M-SEARCH * HTTP/1.1\r\nHOST: %@:%d\r\nMAN: \"ssdp:discover\"\r\nMX: 3\r\nST: %@\r\nUSER-AGENT: iOS UPnP/1.1 mccree/1.0\r\n\r\n", ssdpAddres, ssdpPort, serviceType_AVTransport];
 }
 
+- (BOOL)beginSearchSessionIfNeeded {
+    @synchronized (self) {
+        if (self.searchSessionActive) {
+            self.closingForRetry = NO;
+            return NO;
+        }
+        self.searchSessionActive = YES;
+        self.searchGeneration += 1;
+        self.retryCount = 0;
+        self.closingForRetry = NO;
+        return YES;
+    }
+}
+
 - (void)start{
     NSError *error = nil;
     
@@ -80,6 +99,13 @@
     NSLog(@"[MRDLNA] ⚠️ 检测到模拟器环境，DLNA 搜索可能无法正常工作");
     NSLog(@"[MRDLNA] ⚠️ 请使用真机测试 DLNA 功能");
 #endif
+    
+    BOOL isNewSession = [self beginSearchSessionIfNeeded];
+    if (isNewSession) {
+        if ([self.delegate respondsToSelector:@selector(didStartSearch)]) {
+            [self.delegate didStartSearch];
+        }
+    }
     
     // 如果 socket 已关闭或未初始化，重新创建
     if (!_udpSocket || _udpSocket.isClosed) {
@@ -110,6 +136,7 @@
     if (![_udpSocket bindToPort:0 error:&error]){
         NSLog(@"[MRDLNA] bindToPort error: %@", error);
         [self onError:error];
+        [self notifySearchDidStop];
         return;
     }
     
@@ -119,6 +146,7 @@
     {
         NSLog(@"[MRDLNA] beginReceiving error: %@", error);
         [self onError:error];
+        [self notifySearchDidStop];
         return;
     }
     
@@ -135,6 +163,7 @@
 - (void)stop{
     [_udpSocket leaveMulticastGroup:ssdpAddres error:nil];
     [_udpSocket close];
+    [self notifySearchDidStop];
 }
 
 - (void)search{
@@ -143,8 +172,18 @@
     self.receiveDevice = YES;
     [self onChange];
     
+    // 允许单独调 search：同样纳入「开搜必有结束」契约
+    if ([self beginSearchSessionIfNeeded]) {
+        if ([self.delegate respondsToSelector:@selector(didStartSearch)]) {
+            [self.delegate didStartSearch];
+        }
+    }
+    
     if (!_udpSocket || _udpSocket.isClosed) {
         NSLog(@"[MRDLNA] search: socket is closed, cannot send");
+        NSError *error = [NSError errorWithDomain:@"MRDLNA" code:-1 userInfo:@{NSLocalizedDescriptionKey: @"UDP socket is closed"}];
+        [self onError:error];
+        [self notifySearchDidStop];
         return;
     }
     
@@ -162,47 +201,105 @@
 
 
 #pragma mark -- GCDAsyncUdpSocketDelegate --
+
+/// 结束本轮搜索并通知上层（成功超时 / 任一失败终态都要走；同一轮幂等一次）
+- (void)notifySearchDidStop {
+    @synchronized (self) {
+        if (!self.searchSessionActive) {
+            return;
+        }
+        self.searchSessionActive = NO;
+        self.receiveDevice = NO;
+        self.closingForRetry = NO;
+    }
+    NSLog(@"[MRDLNA] 搜索结束，找到 %lu 个设备", (unsigned long)self.deviceDictionary.count);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.delegate respondsToSelector:@selector(didStopSearch)]) {
+            [self.delegate didStopSearch];
+        }
+    });
+}
+
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag{
     NSLog(@"[MRDLNA] M-SEARCH 发送成功，等待设备响应...");
-     __weak typeof (self) weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(weakSelf.searchTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        weakSelf.receiveDevice = NO;
-        NSLog(@"[MRDLNA] 搜索结束，找到 %lu 个设备", (unsigned long)weakSelf.deviceDictionary.count);
+    __weak typeof (self) weakSelf = self;
+    NSInteger generation;
+    NSInteger searchTime;
+    @synchronized (self) {
+        generation = self.searchGeneration;
+        searchTime = self.searchTime;
+    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(searchTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) { return; }
+        @synchronized (strongSelf) {
+            // 过期 timer 不得结束新一轮搜索
+            if (strongSelf.searchGeneration != generation) { return; }
+        }
+        [strongSelf notifySearchDidStop];
     });
 }
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError * _Nullable)error{
     NSLog(@"[MRDLNA] M-SEARCH 发送失败: %@", error);
     
-    // 如果是 "No route to host" 错误，可能是模拟器或网络问题
+    // No route to host：重试通常无效，直接结束本轮，让上层结束「搜索中」或自行再搜
     if (error.code == 65) {
         NSLog(@"[MRDLNA] ⚠️ 'No route to host' 错误通常表示：");
         NSLog(@"[MRDLNA]    1. 正在模拟器上运行（模拟器不支持 UDP 多播）");
-        NSLog(@"[MRDLNA]    2. WiFi 网络未连接");
+        NSLog(@"[MRDLNA]    2. WiFi 网络未连接 / 新系统缺 multicast entitlement");
         NSLog(@"[MRDLNA]    3. 路由器开启了 AP 隔离");
+        @synchronized (self) {
+            self.retryCount = 0;
+        }
+        [self onError:error];
+        [self notifySearchDidStop];
+        return;
     }
     
-    // 尝试重试（最多 2 次）
-    if (self.retryCount < 2) {
-        self.retryCount++;
-        NSLog(@"[MRDLNA] 尝试重试 (%ld/2)...", (long)self.retryCount);
-        
-        // 关闭旧 socket，重新创建
+    // 其它错误：最多重试 2 次（保持同一 search session，不再次 didStartSearch）
+    BOOL shouldRetry = NO;
+    NSInteger retryCount = 0;
+    @synchronized (self) {
+        if (self.retryCount < 2) {
+            self.retryCount++;
+            retryCount = self.retryCount;
+            self.closingForRetry = YES;
+            shouldRetry = YES;
+        } else {
+            self.retryCount = 0;
+        }
+    }
+    if (shouldRetry) {
+        NSLog(@"[MRDLNA] 尝试重试 (%ld/2)...", (long)retryCount);
         [_udpSocket close];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self start];
         });
     } else {
-        self.retryCount = 0;
         [self onError:error];
+        [self notifySearchDidStop];
     }
 }
 
 - (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError  * _Nullable)error{
     NSLog(@"[MRDLNA] udpSocket关闭, error: %@", error);
+    // 重试会 close 旧 socket 再 setupSocket；迟到的 didClose 不得结束新一轮
+    if (sock != _udpSocket) {
+        return;
+    }
+    BOOL ignoreClose = NO;
+    @synchronized (self) {
+        ignoreClose = self.closingForRetry;
+    }
+    if (ignoreClose) {
+        return;
+    }
     if (error) {
         [self onError:error];
     }
+    // 当前 socket 异常关闭且本轮仍在搜：结束，避免上层一直「搜索中」
+    [self notifySearchDidStop];
 }
 
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data

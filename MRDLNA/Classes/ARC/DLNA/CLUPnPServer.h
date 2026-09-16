@@ -26,6 +26,11 @@
  */
 - (void)upnpSearchErrorWithError:(NSError *)error;
 
+/// 开始一轮搜索。与 didStopSearch 成对：调用 start/search 后，超时、发送失败、绑定失败或主动 stop 等终态都会回调一次。
+- (void)didStartSearch;
+/// 本轮搜索结束。同一轮最多一次；失败与成功超时都走这里，保证上层能退出「搜索中」。
+- (void)didStopSearch;
+
 @end
 
 @interface CLUPnPServer : NSObject
